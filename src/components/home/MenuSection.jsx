@@ -43,7 +43,7 @@ const MenuSection = () => {
           <span className="menu-section-label">{t('OUR SPECIALTY')}</span>
           <h2 className="menu-section-title">{t('DELICIOUS MENU')}</h2>
           <p className="menu-section-description">
-            {t('Discover our signature collection of traditional Indonesian brownies and pastries, crafted with love and the finest ingredients.')}
+            {t('Discover our signature collection of traditional Indonesian brownies and pastries.')}
           </p>
         </div>
         

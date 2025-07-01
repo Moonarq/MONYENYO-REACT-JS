@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useLanguage } from '../../hooks/useLanguage'
 import './HeroSection.css'
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const { t } = useLanguage()
   
   const backgroundImages = [
     '/images/desktop1.jpg',

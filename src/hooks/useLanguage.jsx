@@ -116,7 +116,11 @@ const translations = {
     'WhatsApp': 'WhatsApp',
     'Message sent successfully!': 'Message sent successfully!',
     'Sorry, there was a problem sending your message. Please try again later.': 'Sorry, there was a problem sending your message. Please try again later.',
-    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.'
+    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.',
+    // Home page translations
+    "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Indonesia's Best Brownies Pastry",
+    "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.",
+    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts"
   },
   id: {
     HOME: 'BERANDA',
@@ -230,7 +234,11 @@ const translations = {
     'WhatsApp': 'WhatsApp',
     'Message sent successfully!': 'Pesan berhasil dikirim!',
     'Sorry, there was a problem sending your message. Please try again later.': 'Maaf, terjadi masalah saat mengirim pesan Anda. Silakan coba lagi nanti.',
-    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Hubungi Monyenyo. Kontak kami untuk pertanyaan, pesanan, atau peluang kolaborasi.'
+    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Hubungi Monyenyo. Kontak kami untuk pertanyaan, pesanan, atau peluang kolaborasi.',
+    // Home page translations
+    "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Brownies Pastry Terbaik Indonesia",
+    "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Rasakan perpaduan sempurna cita rasa tradisional Indonesia dengan teknik kuliner modern. Temukan brownies dan pastry khas Monyenyo.",
+    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "brownies Indonesia, pastry tradisional, Monyenyo, makanan Jakarta, dessert Indonesia"
   }
 }
 

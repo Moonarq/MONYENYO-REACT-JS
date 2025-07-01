@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Monyenyo - Indonesia's Best Brownies Pastry</title>
-        <meta name="description" content="Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries." />
-        <meta name="keywords" content="Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts" />
+        <title>{t("Monyenyo - Indonesia's Best Brownies Pastry")}</title>
+        <meta name="description" content={t("Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.")} />
+        <meta name="keywords" content={t("Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts")} />
         
         {/* Favicon */}
         <link rel="icon" href="/images/favicon_large.ico" type="image/x-icon" />
