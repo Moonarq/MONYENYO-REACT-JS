@@ -95,6 +95,11 @@ const translations = {
     'by Founder': 'by Founder',
     'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.',
     // Outlets page translations
+    'OUR STORE LOCATION': 'OUR STORE LOCATION',
+    'BROWNIES PASTRY': 'BROWNIES PASTRY',
+    'BEST IN INDONESIA': 'BEST IN INDONESIA',
+    'Soft. Crunchy. Irresistible.': 'Soft. Crunchy. Irresistible.',
+    'Find Our Location': 'Find Our Location',
     'Our Store Location': 'Our Store Location',
     'Visit Monyenyo Bandung': 'Visit Monyenyo Bandung',
     'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung',
@@ -122,7 +127,11 @@ const translations = {
     "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Indonesia's Best Brownies Pastry",
     "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.",
     "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts",
-    'FEATURED': 'FEATURED'
+    'FEATURED': 'FEATURED',
+    // Outlets page translations
+    'BROWNIES PASTRY': 'BROWNIES PASTRY',
+    'BEST IN INDONESIA': 'BEST IN INDONESIA',
+    'Soft. Crunchy. Irresistible.': 'Soft. Crunchy. Irresistible.'
   },
   id: {
     HOME: 'BERANDA',
@@ -215,6 +224,11 @@ const translations = {
     'by Founder': 'oleh Pendiri',
     'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Perjalanan melalui generasi tradisi memanggang saat kami mengungkap rahasia di balik brownies andalan kami. Dari teknik pencampuran rempah kuno hingga metode presentasi modern, temukan bagaimana kami menghormati warisan kuliner kaya Indonesia.',
     // Outlets page translations
+    'OUR STORE LOCATION': 'LOKASI TOKO KAMI',
+    'BROWNIES PASTRY': 'BROWNIES PASTRY',
+    'BEST IN INDONESIA': 'TERBAIK DI INDONESIA',
+    'Soft. Crunchy. Irresistible.': 'Lembut. Renyah. Tak Tertahankan.',
+    'Find Our Location': 'Temukan Lokasi Kami',
     'Our Store Location': 'Lokasi Toko Kami',
     'Visit Monyenyo Bandung': 'Kunjungi Monyenyo Bandung',
     'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Rasakan brownies Indonesia otentik di toko flagship modern kami yang terletak di jantung Bandung',

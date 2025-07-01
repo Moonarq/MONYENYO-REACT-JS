@@ -21,13 +21,13 @@ const Outlets = () => {
           <section className="hero-section">
             <div className="container">
               <div className="hero-content">
-                <div className="hero-badge">OUR STORE LOCATION</div>
-                <h1 className="hero-title">
-                  BROWNIES PASTRY<br />
-                  TERBAIK DI INDONESIA
+                <div className="hero-badge">{t('OUR STORE LOCATION')}</div>
+                <h1 className="hero-title"> 
+                {t('BROWNIES PASTRY')}<br />
+                {t('BEST IN INDONESIA')}
                 </h1>
-                <p className="hero-subtitle">
-                  Lembut. Renyah. Tak Tertahankan.
+                <p className="hero-subtitle">                
+                  {t('Soft. Crunchy. Irresistible.')}
                 </p>
                 <div className="hero-cta">
                   <a
