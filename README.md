@@ -2,7 +2,7 @@
   <img src="docs/personal-logo.png" width="180" alt="Kelvianov Logo" />
 </p>
 
-# Monyenyo Official Website - React.js
+# Company Profile - React.js
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -12,13 +12,13 @@
 ![Responsive](https://img.shields.io/badge/Responsive-Design-29B6F6?style=for-the-badge)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-**Modern company profile website for Monyenyo: Indonesian brownies brand built with React.js and Vite.**
+**Modern company profile website for Company Profile: built with React.js and Vite.**
 
 ---
 
 ## 📋 Project Overview
 
-This is a modern, fully responsive company profile website for Monyenyo brand built with React.js and Vite. The website showcases the company's products, services, outlets, blog articles, and contact information with a clean, professional design optimized for all devices.
+This is a modern, fully responsive company profile website for Company Profile built with React.js and Vite. The website showcases the company's products, services, outlets, blog articles, and contact information with a clean, professional design optimized for all devices.
 
 ---
 
@@ -224,7 +224,7 @@ The `dist/` folder will contain the production-ready files that can be deployed 
 
 ## 👤 Author
 
-- **[Your Name]** - Initial work
+- Kelvianov Putra Kesuma - Initial work
 
 ---
 
@@ -237,9 +237,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you have any questions or need support, please contact:
-- Email: [your-email@example.com]
-- WhatsApp: [your-whatsapp-number]
+- Email: [kelvianov10@gmail.com]
+- WhatsApp: [082295029308]
 
 ---
 
-**Built with ❤️ for Monyenyo | React.js + Vite | Last Updated: July 2025**
+**Built with ❤️  | React.js + Vite | Last Updated: July 2025**
