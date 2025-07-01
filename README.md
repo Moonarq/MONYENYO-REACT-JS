@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/images/favicon_large.ico" width="100" alt="Monyenyo Logo" />
+  <img src="docs/personal-logo.png" width="180" alt="Kelvianov Logo" />
 </p>
 
 # Monyenyo Official Website - React.js
