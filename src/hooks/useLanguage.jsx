@@ -115,6 +115,7 @@ const translations = {
     'Call Us': 'Call Us',
     'WhatsApp': 'WhatsApp',
     'Message sent successfully!': 'Message sent successfully!',
+    'Sorry, there was a problem sending your message. Please try again later.': 'Sorry, there was a problem sending your message. Please try again later.',
     'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.'
   },
   id: {
@@ -228,6 +229,7 @@ const translations = {
     'Call Us': 'Telepon Kami',
     'WhatsApp': 'WhatsApp',
     'Message sent successfully!': 'Pesan berhasil dikirim!',
+    'Sorry, there was a problem sending your message. Please try again later.': 'Maaf, terjadi masalah saat mengirim pesan Anda. Silakan coba lagi nanti.',
     'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Hubungi Monyenyo. Kontak kami untuk pertanyaan, pesanan, atau peluang kolaborasi.'
   }
 }
