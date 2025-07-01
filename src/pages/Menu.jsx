@@ -1,0 +1,31 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
+const Menu = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Menu - Monyenyo</title>
+        <meta name="description" content="Explore our delicious menu of traditional Indonesian brownies, pastries, and specialty items." />
+      </Helmet>
+      
+      <div style={{ paddingTop: '100px', minHeight: '100vh', background: '#fafafa' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '100px 0' }}>
+            <h1 style={{ fontSize: '3rem', color: '#2c2c2c', marginBottom: '20px' }}>Our Menu</h1>
+            <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '600px', margin: '0 auto' }}>
+              Discover our signature collection of traditional Indonesian brownies and pastries, crafted with love and the finest ingredients.
+            </p>
+            <div style={{ marginTop: '40px', padding: '40px', background: 'white', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+              <p style={{ color: '#666', lineHeight: '1.8' }}>
+                Coming soon... Full menu page content will be migrated from the original HTML structure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Menu
