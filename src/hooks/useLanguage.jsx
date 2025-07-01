@@ -120,7 +120,8 @@ const translations = {
     // Home page translations
     "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Indonesia's Best Brownies Pastry",
     "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.",
-    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts"
+    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts",
+    'FEATURED': 'FEATURED'
   },
   id: {
     HOME: 'BERANDA',
@@ -238,7 +239,8 @@ const translations = {
     // Home page translations
     "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Brownies Pastry Terbaik Indonesia",
     "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Rasakan perpaduan sempurna cita rasa tradisional Indonesia dengan teknik kuliner modern. Temukan brownies dan pastry khas Monyenyo.",
-    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "brownies Indonesia, pastry tradisional, Monyenyo, makanan Jakarta, dessert Indonesia"
+    "Indonesian brownies, traditional pastry, Monyenyo, Jakarta food, Indonesian desserts": "brownies Indonesia, pastry tradisional, Monyenyo, makanan Jakarta, dessert Indonesia",
+    'FEATURED': 'UNGGULAN'
   }
 }
 

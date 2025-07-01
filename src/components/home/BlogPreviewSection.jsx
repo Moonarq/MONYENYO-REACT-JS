@@ -61,7 +61,7 @@ const BlogPreviewSection = () => {
           <div className="featured-blog-post">
             <div className="featured-blog-image">
               <img src={featuredPost.image} alt={featuredPost.title} />
-              <div className="featured-blog-badge">FEATURED</div>
+              <div className="featured-blog-badge">{t('FEATURED')}</div>
             </div>
             <div className="featured-blog-content">
               <div className="featured-blog-meta">
