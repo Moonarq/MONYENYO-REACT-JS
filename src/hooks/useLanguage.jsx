@@ -98,7 +98,24 @@ const translations = {
     'Our Store Location': 'Our Store Location',
     'Visit Monyenyo Bandung': 'Visit Monyenyo Bandung',
     'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung',
-    'Find Our Location': 'Find Our Location'
+    'Find Our Location': 'Find Our Location',
+    // Contact page translations
+    'Get in Touch': 'Get in Touch',
+    'Contact Us Today': 'Contact Us Today',
+    'We\'d love to hear from you. Reach out for inquiries, orders, or collaboration opportunities.': 'We\'d love to hear from you. Reach out for inquiries, orders, or collaboration opportunities.',
+    'Send us a Message': 'Send us a Message',
+    'Have a question or want to collaborate? We\'re here to help and excited to connect with you.': 'Have a question or want to collaborate? We\'re here to help and excited to connect with you.',
+    'Name': 'Name',
+    'Email': 'Email',
+    'Message': 'Message',
+    'Your Name': 'Your Name',
+    'you@email.com': 'you@email.com',
+    'Type your message...': 'Type your message...',
+    'Send Message': 'Send Message',
+    'Call Us': 'Call Us',
+    'WhatsApp': 'WhatsApp',
+    'Message sent successfully!': 'Message sent successfully!',
+    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.'
   },
   id: {
     HOME: 'BERANDA',
@@ -194,7 +211,24 @@ const translations = {
     'Our Store Location': 'Lokasi Toko Kami',
     'Visit Monyenyo Bandung': 'Kunjungi Monyenyo Bandung',
     'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Rasakan brownies Indonesia otentik di toko flagship modern kami yang terletak di jantung Bandung',
-    'Find Our Location': 'Temukan Lokasi Kami'
+    'Find Our Location': 'Temukan Lokasi Kami',
+    // Contact page translations
+    'Get in Touch': 'Hubungi Kami',
+    'Contact Us Today': 'Hubungi Kami Hari Ini',
+    'We\'d love to hear from you. Reach out for inquiries, orders, or collaboration opportunities.': 'Kami ingin mendengar dari Anda. Hubungi kami untuk pertanyaan, pesanan, atau peluang kolaborasi.',
+    'Send us a Message': 'Kirim Pesan',
+    'Have a question or want to collaborate? We\'re here to help and excited to connect with you.': 'Punya pertanyaan atau ingin berkolaborasi? Kami di sini untuk membantu dan senang terhubung dengan Anda.',
+    'Name': 'Nama',
+    'Email': 'Email',
+    'Message': 'Pesan',
+    'Your Name': 'Nama Anda',
+    'you@email.com': 'anda@email.com',
+    'Type your message...': 'Ketik pesan Anda...',
+    'Send Message': 'Kirim Pesan',
+    'Call Us': 'Telepon Kami',
+    'WhatsApp': 'WhatsApp',
+    'Message sent successfully!': 'Pesan berhasil dikirim!',
+    'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Hubungi Monyenyo. Kontak kami untuk pertanyaan, pesanan, atau peluang kolaborasi.'
   }
 }
 
