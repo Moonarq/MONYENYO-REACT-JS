@@ -115,7 +115,7 @@ const Blogs = () => {
             <div className="featured-content">
               <div className="featured-image">
                 <img src="/images/test1.png" alt="Featured Article" />
-                <div className="featured-badge">FEATURED</div>
+                <div className="featured-badge">{t('FEATURED')}</div>
               </div>
               <div className="featured-text">
                 <div className="article-meta">

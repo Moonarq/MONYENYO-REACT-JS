@@ -117,6 +117,7 @@ const translations = {
     'Message sent successfully!': 'Message sent successfully!',
     'Sorry, there was a problem sending your message. Please try again later.': 'Sorry, there was a problem sending your message. Please try again later.',
     'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.',
+    'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.',
     // Home page translations
     "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Indonesia's Best Brownies Pastry",
     "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.",
@@ -236,6 +237,7 @@ const translations = {
     'Message sent successfully!': 'Pesan berhasil dikirim!',
     'Sorry, there was a problem sending your message. Please try again later.': 'Maaf, terjadi masalah saat mengirim pesan Anda. Silakan coba lagi nanti.',
     'Get in touch with Monyenyo. Contact us for inquiries, orders, or collaboration opportunities.': 'Hubungi Monyenyo. Kontak kami untuk pertanyaan, pesanan, atau peluang kolaborasi.',
+    'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Masakan tradisional Indonesia dengan cita rasa otentik dan teknik kuliner modern.',
     // Home page translations
     "Monyenyo - Indonesia's Best Brownies Pastry": "Monyenyo - Brownies Pastry Terbaik Indonesia",
     "Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques. Discover Monyenyo's signature brownies and pastries.": "Rasakan perpaduan sempurna cita rasa tradisional Indonesia dengan teknik kuliner modern. Temukan brownies dan pastry khas Monyenyo.",

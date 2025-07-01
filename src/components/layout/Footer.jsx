@@ -17,10 +17,7 @@ const Footer = () => {
               <span className="logo-text">Monyenyo</span>
             </div>
             <p className="footer-desc">
-              {location.pathname === '/about' 
-                ? 'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.'
-                : t('A group of highly skilled professionals building a future of shared success.')
-              }
+              {t('Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.')}
             </p>
           </div>
 
