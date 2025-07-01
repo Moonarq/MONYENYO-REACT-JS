@@ -93,7 +93,12 @@ const translations = {
     'Preserving Culinary Heritage': 'Preserving Culinary Heritage',
     'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.': 'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.',
     'by Founder': 'by Founder',
-    'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.'
+    'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.',
+    // Outlets page translations
+    'Our Store Location': 'Our Store Location',
+    'Visit Monyenyo Bandung': 'Visit Monyenyo Bandung',
+    'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung',
+    'Find Our Location': 'Find Our Location'
   },
   id: {
     HOME: 'BERANDA',
@@ -184,7 +189,12 @@ const translations = {
     'Preserving Culinary Heritage': 'Melestarikan Warisan Kuliner',
     'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.': 'Misi kami untuk melestarikan dan merayakan tradisi memanggang kaya Indonesia sambil merangkul inovasi modern.',
     'by Founder': 'oleh Pendiri',
-    'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Perjalanan melalui generasi tradisi memanggang saat kami mengungkap rahasia di balik brownies andalan kami. Dari teknik pencampuran rempah kuno hingga metode presentasi modern, temukan bagaimana kami menghormati warisan kuliner kaya Indonesia.'
+    'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Perjalanan melalui generasi tradisi memanggang saat kami mengungkap rahasia di balik brownies andalan kami. Dari teknik pencampuran rempah kuno hingga metode presentasi modern, temukan bagaimana kami menghormati warisan kuliner kaya Indonesia.',
+    // Outlets page translations
+    'Our Store Location': 'Lokasi Toko Kami',
+    'Visit Monyenyo Bandung': 'Kunjungi Monyenyo Bandung',
+    'Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung': 'Rasakan brownies Indonesia otentik di toko flagship modern kami yang terletak di jantung Bandung',
+    'Find Our Location': 'Temukan Lokasi Kami'
   }
 }
 
