@@ -70,6 +70,10 @@ COMPANY PROFILE REACT.JS/
 ├── package.json               # Dependencies and scripts
 ├── vite.config.js             # Vite configuration
 ├── LICENSE                    # Project license
+├── README.md                  # Project documentation
+│
+├── docs/                      # Documentation assets
+│   └── personal-logo.png      # Personal logo for README
 │
 ├── public/                    # Static assets
 │   └── images/               # Image assets
