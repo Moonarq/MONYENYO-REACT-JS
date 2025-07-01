@@ -224,7 +224,7 @@ The `dist/` folder will contain the production-ready files that can be deployed 
 
 ## 👤 Author
 
-- **[Your Name]** - Initial work
+- Kelvianov Putra Kesuma - Initial work
 
 ---
 
@@ -237,8 +237,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you have any questions or need support, please contact:
-- Email: [your-email@example.com]
-- WhatsApp: [your-whatsapp-number]
+- Email: [kelvianov10@gmail.com]
+- WhatsApp: [082295029308]
 
 ---
 
