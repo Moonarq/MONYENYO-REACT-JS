@@ -2,7 +2,7 @@
   <img src="docs/personal-logo.png" width="180" alt="Kelvianov Logo" />
 </p>
 
-# Monyenyo Official Website - React.js
+# Company Profile - React.js
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
