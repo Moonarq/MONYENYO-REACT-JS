@@ -126,19 +126,19 @@ const Header = () => {
             className={`nav-link ${isActive('/') ? 'active' : ''}`}
             onClick={handleHomeClick}
           >
-            {t('HOME')}
+            HOME
           </Link>
           <Link 
             to="/about" 
             className={`nav-link ${isActive('/about') ? 'active' : ''}`}
           >
-            {t('ABOUT')}
+            ABOUT
           </Link>
           <Link 
             to="/menu" 
             className={`nav-link ${isActive('/menu') ? 'active' : ''}`}
           >
-            {t('MENU')}
+            MENU
           </Link>
         </nav>
 
@@ -153,19 +153,19 @@ const Header = () => {
             to="/blogs" 
             className={`nav-link ${isActive('/blogs') ? 'active' : ''}`}
           >
-            {t('BLOGS')}
+            BLOGS
           </Link>
           <Link 
             to="/outlets" 
             className={`nav-link ${isActive('/outlets') ? 'active' : ''}`}
           >
-            {t('OUTLETS')}
+            OUTLETS
           </Link>
           <Link 
             to="/contact" 
             className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
           >
-            {t('CONTACT')}
+            CONTACT
           </Link>
         </nav>
 
