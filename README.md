@@ -12,13 +12,13 @@
 ![Responsive](https://img.shields.io/badge/Responsive-Design-29B6F6?style=for-the-badge)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-**Modern company profile website for Monyenyo: Indonesian brownies brand built with React.js and Vite.**
+**Modern company profile website for Company Profile: built with React.js and Vite.**
 
 ---
 
 ## 📋 Project Overview
 
-This is a modern, fully responsive company profile website for Monyenyo brand built with React.js and Vite. The website showcases the company's products, services, outlets, blog articles, and contact information with a clean, professional design optimized for all devices.
+This is a modern, fully responsive company profile website for Company Profile built with React.js and Vite. The website showcases the company's products, services, outlets, blog articles, and contact information with a clean, professional design optimized for all devices.
 
 ---
 
@@ -242,4 +242,4 @@ If you have any questions or need support, please contact:
 
 ---
 
-**Built with ❤️ for Monyenyo | React.js + Vite | Last Updated: July 2025**
+**Built with ❤️  | React.js + Vite | Last Updated: July 2025**
