@@ -101,11 +101,16 @@
     backdrop-filter: blur(10px);
 }
 
-.hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 24px;
-    line-height: 1.1;
+/* Hero Section - Outlets Page Specific */
+.outlets-page .hero-title {
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 30px !important;
+    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -1px !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5) !important;
+    font-family: 'Inter', sans-serif !important;
 }
 
 .hero-subtitle {
@@ -611,8 +616,10 @@ body.outlets-page.no-scroll {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .outlets-page .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.5px !important;
     }
     
     .hero-cta {
