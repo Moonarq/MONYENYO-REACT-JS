@@ -191,12 +191,12 @@
         padding-right: 15px;
     }
     
-    .hero-subtitle {
-        font-size: 14px;
-        margin-bottom: 12px;
-        color: white !important;
-    }
-    
+   .hero .hero-content .hero-text .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: white;
+}
+
     .hero-title {
         font-size: 36px;
         line-height: 1.05;
