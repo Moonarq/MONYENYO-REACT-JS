@@ -7,6 +7,7 @@ import AboutSection from '../components/home/AboutSection'
 import FreshSection from '../components/home/FreshSection'
 import MenuSection from '../components/home/MenuSection'
 import BlogPreviewSection from '../components/home/BlogPreviewSection'
+import About from './About'
 
 const Home = () => {
   const { t } = useLanguage()

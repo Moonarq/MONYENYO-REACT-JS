@@ -3,33 +3,62 @@ import './HeroSection.css'
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
   
-  const backgroundImages = [
-    '/images/desktop1.jpg',
-    '/images/desktop2.jpg',
-    '/images/desktop4.jpg'
+  const slides = [
+    {
+      image: '/images/desktop1.jpg',
+      subtitle: 'Soft. Crispy. Irresistible.',
+      title: 'INDONESIA\'S BEST<br />BROWNIES PASTRY'
+    },
+    {
+      image: '/images/desktop2.jpg',
+      subtitle: 'Fresh. Delicious. Premium.',
+      title: 'INDONESIA\'S BEST<br />CAKE & PASTRY'
+    },
+    {
+      image: '/images/desktop4.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    }
   ]
+
+  // Function to change slide with animation
+  const changeSlide = (newSlide) => {
+    setIsTransitioning(true)
+    
+    setTimeout(() => {
+      setCurrentSlide(newSlide)
+    }, 250) // Wait for fade out
+    
+    setTimeout(() => {
+      setIsTransitioning(false)
+    }, 750) // Total animation time
+  }
 
   // Auto-play functionality - berubah setiap 5 detik
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % backgroundImages.length)
+      const nextSlide = (currentSlide + 1) % slides.length
+      changeSlide(nextSlide)
     }, 5000)
     
     return () => clearInterval(interval)
-  }, [backgroundImages.length])
+  }, [currentSlide, slides.length])
 
   // Manual dot navigation
   const goToSlide = (index) => {
-    setCurrentSlide(index)
+    if (index !== currentSlide) {
+      changeSlide(index)
+    }
   }
 
   return (
     <main 
-      className="hero"
+      className={`hero slide-${currentSlide + 1}`}
       id="home"
       style={{
-        backgroundImage: `url(${backgroundImages[currentSlide]})`,
+        backgroundImage: `url(${slides[currentSlide].image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
@@ -39,17 +68,23 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <p className="hero-subtitle">Soft. Crispy. Irresistible.</p>
-            <h1 className="hero-title">
-              INDONESIA'S BEST<br />
-              BROWNIES PASTRY
-            </h1>
+            <p 
+              className={`hero-subtitle ${isTransitioning ? 'fade-out' : 'fade-in'}`}
+              key={`subtitle-${currentSlide}`}
+            >
+              {slides[currentSlide].subtitle}
+            </p>
+            <h1 
+              className={`hero-title ${isTransitioning ? 'fade-out' : 'fade-in'}`}
+              dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
+              key={`title-${currentSlide}`}
+            ></h1>
           </div>
         </div>
 
         {/* Pagination Dots */}
         <div className="pagination-dots">
-          {backgroundImages.map((_, index) => (
+          {slides.map((_, index) => (
             <span 
               key={index}
               className={`dot ${index === currentSlide ? 'active' : ''}`}
