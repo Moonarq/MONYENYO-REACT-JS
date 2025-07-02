@@ -1,4 +1,17 @@
 /* contact.css - Simple & Modern Contact Page Styles - Wide Form Layout */
+
+/* Force white title at top of Contact page (transparent header) */
+.contact-page .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+.contact-page .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo .logo-text {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+/* Force white hamburger at top of Contact page (mobile) */
+.contact-page .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu span {
+    background-color: #ffffff !important;
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
     background: #fff;

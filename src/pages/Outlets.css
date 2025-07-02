@@ -1,5 +1,17 @@
 /* Professional Company Profile Styles - Monyenyo Outlets */
 
+/* Force white title at top of Outlets page (transparent header) */
+.outlets-page .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+.outlets-page .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo .logo-text {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+/* Force white hamburger at top of Outlets page (mobile) */
+.outlets-page .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu span {
+    background-color: #ffffff !important;
+}
+
 /* Reset and Base */
 * {
     margin: 0;

@@ -232,3 +232,15 @@ main#home.hero p.hero-subtitle {
     color: #ffffff !important;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5) !important;
 }
+
+/* Force white title at top of Home page (transparent header) */
+body:not(.about-page):not(.menu-page):not(.blogs-page):not(.contact-page):not(.outlets-page) .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+body:not(.about-page):not(.menu-page):not(.blogs-page):not(.contact-page):not(.outlets-page) .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo .logo-text {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+/* Force white hamburger at top of Home page (mobile) */
+body:not(.about-page):not(.menu-page):not(.blogs-page):not(.contact-page):not(.outlets-page) .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu span {
+    background-color: #ffffff !important;
+}

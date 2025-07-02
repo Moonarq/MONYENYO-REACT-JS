@@ -7,6 +7,9 @@ const Contact = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
+    // Apply Contact page styles to header
+    document.body.classList.add('contact-page');
+    
     // AJAX Formspree submit
     const handleFormSubmit = async (e) => {
       e.preventDefault();
@@ -68,6 +71,7 @@ const Contact = () => {
 
     // Cleanup
     return () => {
+      document.body.classList.remove('contact-page');
       form?.removeEventListener('submit', handleFormSubmit);
       closeBtn?.removeEventListener('click', handleToastClose);
     };

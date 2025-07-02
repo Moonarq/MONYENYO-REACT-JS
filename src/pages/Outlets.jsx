@@ -6,6 +6,14 @@ import './Outlets.css'
 const Outlets = () => {
   const { t } = useLanguage()
 
+  // Apply Outlets page styles to header
+  React.useEffect(() => {
+    document.body.classList.add('outlets-page')
+    return () => {
+      document.body.classList.remove('outlets-page')
+    }
+  }, [])
+
   return (
     <>
       <Helmet>
