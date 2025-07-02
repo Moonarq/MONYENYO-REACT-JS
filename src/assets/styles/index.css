@@ -201,7 +201,9 @@ body {
     width: 100%;
     background: #ffffff;
     margin: 3px 0;
-    transition: all 0.3s ease;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
     border-radius: 2px;
 }
 
@@ -227,7 +229,7 @@ body {
     display: none;
 }
 
-/* Mobile Menu Overlay */
+/* Mobile Menu Overlay - UNIFIED VERSION (No transitions/animations) */
 .mobile-menu-overlay {
     display: none;
     position: fixed;
@@ -239,12 +241,17 @@ body {
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
 }
 
 .mobile-menu-overlay.active {
     opacity: 1;
     visibility: visible;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
 }
 
 .mobile-menu {
@@ -255,13 +262,18 @@ body {
     height: 100%;
     background: white;
     padding: 20px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transform: translateX(0); /* Always visible when overlay is active */
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu-overlay.active .mobile-menu {
     transform: translateX(0);
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
 }
 
 .mobile-menu-header {
@@ -307,11 +319,16 @@ body {
     font-weight: 500;
     padding: 12px 0;
     border-bottom: 1px solid #f8f9fa;
-    transition: color 0.3s ease;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
 }
 
 .mobile-nav-link:hover {
     color: #8B4513;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
 }
 
 .mobile-contact {
@@ -766,9 +783,9 @@ body {
     .nav-menu, .nav-menu-right {
         display: none;
     }
-      /* Show Mobile Menu Overlay */
+    /* Show Mobile Menu Overlay - Unified styling above */
     .mobile-menu-overlay {
-        display: block;
+        display: block !important;
     }
     
     /* Hide phone number on mobile */
@@ -902,20 +919,24 @@ body {
     }
 }
 
-/* === FORCE FULLSCREEN MENU HAMBURGER NAVBAR COKLAT === */
+/* === UNIFIED FULLSCREEN MENU FOR ALL NAVBAR STATES === */
 @media (max-width: 900px) {
-  .header.show-on-scroll-up .mobile-menu-overlay.active {
+  /* Force all mobile menu overlay to be identical and instant */
+  .mobile-menu-overlay.active,
+  .header.show-on-scroll-up .mobile-menu-overlay.active,
+  .header.desktop-transparent .mobile-menu-overlay.active,
+  .header.desktop-solid .mobile-menu-overlay.active {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    min-height: 100dvh !important;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    background: rgba(0,0,0,0.7) !important;
+    width: 200vw !important;
+    height: 200vh !important;
+    min-height: 200dvh !important;
+    max-width: 200vw !important;
+    max-height: 200vh !important;
+    background: rgba(0,0,0,0.8) !important;
     z-index: 2147483647 !important;
     display: block !important;
     opacity: 1 !important;
@@ -925,16 +946,25 @@ body {
     border: none !important;
     outline: none !important;
     overflow: hidden !important;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
   }
-  .header.show-on-scroll-up .mobile-menu-overlay.active .mobile-menu {
+  
+  /* Force all mobile menu sidebar to be identical and instant */
+  .mobile-menu-overlay.active .mobile-menu,
+  .header.show-on-scroll-up .mobile-menu-overlay.active .mobile-menu,
+  .header.desktop-transparent .mobile-menu-overlay.active .mobile-menu,
+  .header.desktop-solid .mobile-menu-overlay.active .mobile-menu {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     bottom: 0 !important;
     width: 280px !important;
-    height: 100vh !important;
+    height: 200vh !important;
     min-height: 100dvh !important;
-    max-height: 100vh !important;
+    max-height: 200vh !important;
     background: #fff !important;
     z-index: 2147483648 !important;
     margin: 0 !important;
@@ -945,18 +975,21 @@ body {
     overflow-y: auto !important;
     overflow-x: hidden !important;
     transform: translateX(0) !important;
+    /* NO TRANSITIONS - INSTANT */
+    transition: none !important;
+    animation: none !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
   }
+  
+  /* Force body/html scroll lock when menu is active - ONLY overflow hidden, keep content visible */
+  html:has(.mobile-menu-overlay.active),
+  body:has(.mobile-menu-overlay.active),
   html:has(.header.show-on-scroll-up .mobile-menu-overlay.active),
   body:has(.header.show-on-scroll-up .mobile-menu-overlay.active) {
     overflow: hidden !important;
-    position: fixed !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 }
-/* === END FORCE FULLSCREEN MENU HAMBURGER NAVBAR COKLAT === */
+/* === END UNIFIED FULLSCREEN MENU === */
 
 .footer .logo-text {
   display: inline !important;
@@ -1533,3 +1566,53 @@ body {
     padding: 0 !important;
   }
 }
+
+/* === FINAL FORCE: Mobile Menu Overlay Unified & Instant === */
+/* Ensure all mobile menu overlays are identical across all pages */
+@media (max-width: 900px) {
+  /* Force remove all transitions and animations from ALL mobile menu elements */
+  .mobile-menu-overlay,
+  .mobile-menu-overlay.active,
+  .mobile-menu,
+  .mobile-menu-overlay.active .mobile-menu,
+  .hamburger-menu,
+  .hamburger-menu span,
+  .mobile-nav-link,
+  .mobile-social-link {
+    transition: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    -webkit-animation: none !important;
+  }
+  
+  /* Force instant appearance for all mobile menu overlay states */
+  .mobile-menu-overlay.active,
+  .header .mobile-menu-overlay.active,
+  .header.show-on-scroll-up .mobile-menu-overlay.active,
+  .header.desktop-transparent .mobile-menu-overlay.active,
+  .header.desktop-solid .mobile-menu-overlay.active,
+  .header.hide-on-scroll .mobile-menu-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    background: rgba(0,0,0,0.8) !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  /* Force instant sidebar appearance for all states */
+  .mobile-menu-overlay.active .mobile-menu,
+  .header .mobile-menu-overlay.active .mobile-menu,
+  .header.show-on-scroll-up .mobile-menu-overlay.active .mobile-menu,
+  .header.desktop-transparent .mobile-menu-overlay.active .mobile-menu,
+  .header.desktop-solid .mobile-menu-overlay.active .mobile-menu,
+  .header.hide-on-scroll .mobile-menu-overlay.active .mobile-menu {
+    transform: translateX(0) !important;
+    transition: none !important;
+    animation: none !important;
+    background: #fff !important;
+    width: 280px !important;
+  }
+}
+/* === END FINAL FORCE === */
