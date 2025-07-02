@@ -17,6 +17,27 @@
     opacity: 0 !important;
 }
 
+/* === HIDE NAVBAR AT TOP FOR ABOUT PAGE ON MOBILE === */
+@media (max-width: 768px) {
+  /* Hide entire header at the very top of About page (when not scrolled) */
+  .about-page .header:not(.show-on-scroll-up) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(-100%) !important;
+    pointer-events: none !important;
+  }
+  
+  /* Keep the brown navbar (show-on-scroll-up) visible when scrolling */
+  .about-page .header.show-on-scroll-up {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+}
+
 .about-page .header .social-link {
     color: #333333 !important;
 }
