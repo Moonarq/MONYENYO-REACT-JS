@@ -1,5 +1,14 @@
 /* Professional Blog Styles for Monyenyo */
 
+/* Hide logo/title and hamburger menu ONLY when at top of Blogs page (transparent header) */
+.blogs-page .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo,
+.blogs-page .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+.blogs-page .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* NAVBAR OVERRIDE - Make navbar solid white like about.html */
 .header.desktop-solid {
     background: white !important;

@@ -1,5 +1,14 @@
 /* Menu Page Styles */
 
+/* Hide logo/title and hamburger menu ONLY when at top of Menu page (transparent header) */
+.menu-page .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo,
+.menu-page .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+.menu-page .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* Menu Hero Section */
 .header.desktop-solid .lang-btn {
     color: #2c2c2c !important;

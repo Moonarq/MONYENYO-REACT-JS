@@ -6,6 +6,14 @@ import './Menu.css'
 const Menu = () => {
   const { t } = useLanguage()
 
+  // Apply Menu page styles to header
+  React.useEffect(() => {
+    document.body.classList.add('menu-page')
+    return () => {
+      document.body.classList.remove('menu-page')
+    }
+  }, [])
+
   return (
     <>
       <Helmet>

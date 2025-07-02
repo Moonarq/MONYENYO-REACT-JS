@@ -7,6 +7,14 @@ const Blogs = () => {
   const { t } = useLanguage()
   const [activeCategory, setActiveCategory] = useState('all')
 
+  // Apply Blogs page styles to header
+  React.useEffect(() => {
+    document.body.classList.add('blogs-page')
+    return () => {
+      document.body.classList.remove('blogs-page')
+    }
+  }, [])
+
   const blogArticles = [
     {
       id: 1,

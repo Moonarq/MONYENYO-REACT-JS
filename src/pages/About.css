@@ -8,6 +8,15 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Hide logo/title and hamburger menu ONLY when at top of About page (transparent header) */
+.about-page .header:not(.desktop-solid):not(.show-on-scroll-up) .nav-logo,
+.about-page .header:not(.desktop-solid):not(.show-on-scroll-up) .logo-text,
+.about-page .header:not(.desktop-solid):not(.show-on-scroll-up) .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 .about-page .header .social-link {
     color: #333333 !important;
 }
