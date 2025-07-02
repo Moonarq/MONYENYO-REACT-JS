@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
+import ScrollToTop from './components/common/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Menu from './pages/Menu'
@@ -14,16 +15,19 @@ function App() {
   useSmoothScroll()
   
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/outlets" element={<Outlets />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Layout>
+    <>
+      <ScrollToTop />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/outlets" element={<Outlets />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
+    </>
   )
 }
 

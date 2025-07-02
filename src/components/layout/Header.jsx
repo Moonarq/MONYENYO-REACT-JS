@@ -78,6 +78,22 @@ const Header = () => {
     closeMobileMenu()
   }
 
+  // Handle navigation with scroll to top
+  const handleNavClick = () => {
+    closeMobileMenu()
+    // Use setTimeout to ensure navigation happens first, then scroll
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
+  }
+
+  // Handle desktop navigation with scroll to top
+  const handleDesktopNavClick = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
+  }
+
   const handleLanguageChange = (lang) => {
     setLanguage(lang)
   }
@@ -142,12 +158,14 @@ const Header = () => {
           <Link 
             to="/about" 
             className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+            onClick={handleDesktopNavClick}
           >
             ABOUT
           </Link>
           <Link 
             to="/menu" 
             className={`nav-link ${isActive('/menu') ? 'active' : ''}`}
+            onClick={handleDesktopNavClick}
           >
             MENU
           </Link>
@@ -155,7 +173,7 @@ const Header = () => {
 
         {/* Logo */}
         <div className="nav-logo">
-          <Link to="/" className="logo-text">MoNyeNyo</Link>
+          <Link to="/" className="logo-text" onClick={handleHomeClick}>MoNyeNyo</Link>
         </div>
 
         {/* Right Navigation */}
@@ -163,18 +181,21 @@ const Header = () => {
           <Link 
             to="/blogs" 
             className={`nav-link ${isActive('/blogs') ? 'active' : ''}`}
+            onClick={handleDesktopNavClick}
           >
             BLOGS
           </Link>
           <Link 
             to="/outlets" 
             className={`nav-link ${isActive('/outlets') ? 'active' : ''}`}
+            onClick={handleDesktopNavClick}
           >
             OUTLETS
           </Link>
           <Link 
             to="/contact" 
             className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+            onClick={handleDesktopNavClick}
           >
             CONTACT
           </Link>
@@ -234,35 +255,35 @@ const Header = () => {
             <Link 
               to="/about" 
               className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}
-              onClick={closeMobileMenu}
+              onClick={handleNavClick}
             >
               ABOUT
             </Link>
             <Link 
               to="/menu" 
               className={`mobile-nav-link ${isActive('/menu') ? 'active' : ''}`}
-              onClick={closeMobileMenu}
+              onClick={handleNavClick}
             >
               MENU
             </Link>
             <Link 
               to="/blogs" 
               className={`mobile-nav-link ${isActive('/blogs') ? 'active' : ''}`}
-              onClick={closeMobileMenu}
+              onClick={handleNavClick}
             >
               BLOGS
             </Link>
             <Link 
               to="/outlets" 
               className={`mobile-nav-link ${isActive('/outlets') ? 'active' : ''}`}
-              onClick={closeMobileMenu}
+              onClick={handleNavClick}
             >
               OUTLETS
             </Link>
             <Link 
               to="/contact" 
               className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`}
-              onClick={closeMobileMenu}
+              onClick={handleNavClick}
             >
               CONTACT
             </Link>
