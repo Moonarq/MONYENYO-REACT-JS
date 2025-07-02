@@ -394,7 +394,7 @@ body {
 /* Fresh From Kitchen Section Styles */
 .fresh-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: transparent !important;
 }
 
 /* Menu Section on Index Page */
