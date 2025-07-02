@@ -50,7 +50,7 @@
 /* About Section for Both Pages (index.html and about.html) */
 .about-section, .about-hero {
     min-height: 85vh;
-    background: #ffffff;
+    background: transparent !important;
     display: flex;
     align-items: center;
     position: relative;
@@ -61,12 +61,14 @@
 .about-section {
     padding: 10px 0 60px 0;
     min-height: auto;
+    background: transparent !important;
 }
 
 /* Override specifically for about-hero in index page */
 #about.about-hero {
     padding: 10px 0 60px 0;
     min-height: auto;
+    background: transparent !important;
 }
 
 .about-split, .about-hero-split {
@@ -78,10 +80,12 @@
     margin: 0 auto;
     padding: 0 40px;
     min-height: 600px;
+    background: transparent !important;
 }
 
 .about-image-side, .hero-image-side {
     position: relative;
+    background: transparent !important;
 }
 
 .about-image-container, .hero-image-container {
@@ -89,11 +93,13 @@
     width: 100%;
     height: 600px;
     border-radius: 0;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .about-image, .hero-image {
@@ -101,6 +107,7 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+    background: transparent !important;
 }
 
 .about-content-side, .hero-content-side {
@@ -440,23 +447,37 @@
     .about-hero, .about-section {
         padding: 60px 0;
         min-height: auto;
+        background: transparent !important;
     }
     
     .about-hero-split, .about-split {
         grid-template-columns: 1fr;
         gap: 40px;
         padding: 0 20px;
+        background: transparent !important;
     }
     
     .hero-image-container, .about-image-container {
         height: 350px;
         order: 2;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
     
     .hero-content-side, .about-content-side {
         order: 1;
         padding: 20px 0;
         min-height: auto;
+        background: transparent !important;
+    }
+    
+    .hero-image, .about-image {
+        background: transparent !important;
+    }
+    
+    .hero-image-side, .about-image-side {
+        background: transparent !important;
     }
     
     .hero-main-title, .about-title {
