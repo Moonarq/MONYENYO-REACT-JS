@@ -156,7 +156,6 @@
     .about-hero {
         padding: 60px 0 40px 0;
         min-height: auto;
-        background: transparent !important;
     }
 
     .about-hero-split {
@@ -164,26 +163,15 @@
         gap: 40px;
         padding: 0 20px;
         min-height: auto;
-        background: transparent !important;
-    }
-
-    .hero-image-side {
-        background: transparent !important;
     }
 
     .hero-image-container {
         height: 400px;
-        background: transparent !important;
-    }
-
-    .hero-image {
-        background: transparent !important;
     }
 
     .hero-content-side {
         min-height: auto;
         padding: 20px 0;
-        background: transparent !important;
     }
 
     .company-label::after {
