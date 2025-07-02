@@ -24,6 +24,9 @@ const Header = () => {
       lastScrollPosition.current = window.scrollY
       setIsMenuOpen(true)
       
+      // Add class to body for CSS targeting
+      document.body.classList.add('mobile-menu-active')
+      
       // Prevent body scroll
       document.body.style.position = 'fixed'
       document.body.style.top = `-${lastScrollPosition.current}px`
@@ -37,6 +40,9 @@ const Header = () => {
   const closeMobileMenu = () => {
     setIsMenuOpen(false)
     
+    // Remove class from body
+    document.body.classList.remove('mobile-menu-active')
+    
     // Restore body scroll
     document.body.style.position = ''
     document.body.style.top = ''
@@ -47,7 +53,7 @@ const Header = () => {
     window.scrollTo(0, lastScrollPosition.current)
   }
 
-  // Handle escape key
+  // Handle escape key and cleanup
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isMenuOpen) {
@@ -56,7 +62,12 @@ const Header = () => {
     }
 
     document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
+    
+    // Cleanup function to ensure class is removed if component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.classList.remove('mobile-menu-active')
+    }
   }, [isMenuOpen])
 
   const handleHomeClick = (e) => {

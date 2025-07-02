@@ -1,5 +1,5 @@
 /* main.css hanya untuk style global, semua style komponen dipindah ke file masing-masing */
-/* CSS komponen diimpor langsung di file komponen masing-masing */
+/* CSS komponen diimpor langsung di file komponen masing */
 
 * {
     margin: 0;
@@ -1046,12 +1046,110 @@ body {
   }
 }
 
-/* Hide hamburger when mobile menu is active (fix for overlay) */
+/* Hide hamburger and title when mobile menu is active (fix for overlay) */
 @media (max-width: 900px) {
+  /* Hide hamburger button completely when menu overlay is active */
   .mobile-menu-overlay.active ~ .container .hamburger-menu,
   .mobile-menu-overlay.active + .container .hamburger-menu,
-  .mobile-menu-overlay.active .hamburger-menu {
+  .mobile-menu-overlay.active .hamburger-menu,
+  .header.show-on-scroll-up .mobile-menu-overlay.active ~ .container .hamburger-menu,
+  .header.show-on-scroll-up .mobile-menu-overlay.active + .container .hamburger-menu,
+  .header.show-on-scroll-up .mobile-menu-overlay.active .hamburger-menu,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .hamburger-menu {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Hide title/logo when mobile menu overlay is active */
+  .mobile-menu-overlay.active ~ .container .logo-text,
+  .mobile-menu-overlay.active + .container .logo-text,
+  .mobile-menu-overlay.active ~ .container .nav-logo,
+  .mobile-menu-overlay.active + .container .nav-logo,
+  .header.show-on-scroll-up .mobile-menu-overlay.active ~ .container .logo-text,
+  .header.show-on-scroll-up .mobile-menu-overlay.active + .container .logo-text,
+  .header.show-on-scroll-up .mobile-menu-overlay.active ~ .container .nav-logo,
+  .header.show-on-scroll-up .mobile-menu-overlay.active + .container .nav-logo,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .logo-text,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .nav-logo {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Alternative: Using body class when menu is active */
+  body:has(.mobile-menu-overlay.active) .header .logo-text,
+  body:has(.mobile-menu-overlay.active) .header .nav-logo,
+  body:has(.mobile-menu-overlay.active) .header .hamburger-menu,
+  body:has(.header.show-on-scroll-up .mobile-menu-overlay.active) .header .logo-text,
+  body:has(.header.show-on-scroll-up .mobile-menu-overlay.active) .header .nav-logo,
+  body:has(.header.show-on-scroll-up .mobile-menu-overlay.active) .header .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+/* === ULTRA SPECIFIC: Hide all header elements when mobile menu overlay is active === */
+@media (max-width: 900px) {
+  /* Ketika mobile menu overlay aktif, sembunyikan SEMUA elemen header termasuk yang di-force oleh navbar coklat */
+  .header:has(.mobile-menu-overlay.active) .logo-text,
+  .header:has(.mobile-menu-overlay.active) .nav-logo,
+  .header:has(.mobile-menu-overlay.active) .hamburger-menu,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .logo-text,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .nav-logo,
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Override semua force positioning ketika menu aktif */
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .logo-text {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    right: auto !important;
+    transform: none !important;
+  }
+  
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .nav-logo {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    right: auto !important;
+    transform: none !important;
+  }
+  
+  .header.show-on-scroll-up:has(.mobile-menu-overlay.active) .hamburger-menu {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    transform: none !important;
+  }
+}
+
+/* === Fallback tanpa :has() selector untuk browser yang tidak support === */
+@media (max-width: 900px) {
+  .mobile-menu-overlay.active ~ .header .logo-text,
+  .mobile-menu-overlay.active ~ .header .nav-logo,
+  .mobile-menu-overlay.active ~ .header .hamburger-menu,
+  .mobile-menu-overlay.active + .header .logo-text,
+  .mobile-menu-overlay.active + .header .nav-logo,
+  .mobile-menu-overlay.active + .header .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
   }
 }
 
@@ -1375,4 +1473,63 @@ body {
     .recent-blog-title {
         font-size: 13px;
     }
+}
+
+/* === FINAL FIX: Hide title when mobile menu is active using body class === */
+@media (max-width: 900px) {
+  /* Ketika body memiliki class mobile-menu-active, sembunyikan semua title dan hamburger */
+  body.mobile-menu-active .header .logo-text,
+  body.mobile-menu-active .header .nav-logo,
+  body.mobile-menu-active .header .hamburger-menu,
+  body.mobile-menu-active .header.show-on-scroll-up .logo-text,
+  body.mobile-menu-active .header.show-on-scroll-up .nav-logo,
+  body.mobile-menu-active .header.show-on-scroll-up .hamburger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    right: auto !important;
+    transform: none !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Override semua force positioning ketika menu aktif dengan body class */
+  body.mobile-menu-active .header.show-on-scroll-up .logo-text {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    right: auto !important;
+    transform: none !important;
+    font-size: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  body.mobile-menu-active .header.show-on-scroll-up .nav-logo {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    right: auto !important;
+    transform: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  body.mobile-menu-active .header.show-on-scroll-up .hamburger-menu {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    transform: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
