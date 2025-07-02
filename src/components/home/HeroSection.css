@@ -129,6 +129,8 @@
         font-weight: 400;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         color: white !important;
+        position: relative;
+        top: -2px;
     }
     
     .hero-title {
@@ -232,6 +234,8 @@
     font-size: 14px;
     margin-bottom: 12px;
     color: white;
+    position: relative;
+    top: -5px;
 }
 
     .hero-title {
