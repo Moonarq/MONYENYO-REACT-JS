@@ -12,12 +12,17 @@ const AboutSection = () => {
         <div className="about-hero-split">
           <div className="hero-image-side">
             <div className="hero-image-container">
-              <img src="/images/about.png" alt="Monyenyo About" className="hero-image" />
+              <img
+                src="/images/about.png"
+                alt="Monyenyo About"
+                className="hero-image"
+                style={{ width: '60vw', height: 'auto', display: 'block', marginLeft: 0, maxWidth: '600px' }}
+              />
             </div>
           </div>
           <div className="hero-content-side">
             <div className="hero-content">
-              <span className="company-label">{t('OUR COMPANY')}</span>
+              <span className="company-label">{t('MONYENYO')}</span>
               <h2 
                 className="hero-main-title"
                 dangerouslySetInnerHTML={{ __html: t('TRADITIONAL<br>INDONESIAN FOODS<br>AND HERITAGE') }}

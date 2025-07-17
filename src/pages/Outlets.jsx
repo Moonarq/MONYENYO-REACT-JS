@@ -47,7 +47,7 @@ const Outlets = () => {
                     {t('Find Our Location')}
                   </a>
                   <a
-                    href="https://wa.me/6282295029308?text=Hello%2C%20I%27d%20like%20to%20visit%20Monyenyo%20store"
+                    href="https://wa.me/6285724960839?text=Hello%2C%20I%27d%20like%20to%20visit%20Monyenyo%20store"
                     target="_blank"
                     className="btn-secondary"
                     rel="noopener"
