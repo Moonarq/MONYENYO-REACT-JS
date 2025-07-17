@@ -161,7 +161,14 @@
     .hero.slide-2 .hero-subtitle,
     .hero.slide-2 .hero-title,
     .hero.slide-3 .hero-subtitle,
-    .hero.slide-3 .hero-title {
+    .hero.slide-3 .hero-title,
+    .hero.slide-4 .hero-subtitle,
+    .hero.slide-4 .hero-title,
+    .hero.slide-5 .hero-subtitle,
+    .hero.slide-5 .hero-title,
+    .hero.slide-6 .hero-subtitle,
+    .hero.slide-6 .hero-title {
+
         margin-left: 0;
     }
     
