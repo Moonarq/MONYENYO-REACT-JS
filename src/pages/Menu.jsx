@@ -44,31 +44,38 @@ const Menu = () => {
           <div className="container">
             <div className="menu-grid">
               {/* Menu Item 1 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/menu1.png" alt="Chocolate Brownies" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 45,000</div>
+              <a
+                href="https://setoko.co/monyenyo-bakery/brownies-pastry-original-544152"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <div className="menu-item">
+                  <div className="menu-image">
+                    <img src="/images/menu1.png" alt="Chocolate Brownies" />
+                    <div className="menu-overlay">
+                      <div className="menu-price">Rp 45,000</div>
+                    </div>
                   </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Chocolate Brownies')}</h3>
-                  <p className="menu-desc">
-                    {t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Brownies')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>4.9</span>
+                  <div className="menu-content">
+                    <h3 className="menu-name">{t('Chocolate Brownies')}</h3>
+                    <p className="menu-desc">
+                      {t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.')}
+                    </p>
+                    <div className="menu-details">
+                      <span className="menu-category">{t('Brownies')}</span>
+                      <div className="menu-rating">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <span>4.9</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Menu Item 2 */}
               <div className="menu-item">
