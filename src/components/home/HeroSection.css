@@ -58,6 +58,18 @@
 .hero.slide-3 .hero-title {
     margin-left: -370px;
 }
+.hero.slide-4 .hero-subtitle,
+.hero.slide-4 .hero-title {
+    margin-left: -370px;
+}
+.hero.slide-5 .hero-subtitle,
+.hero.slide-5 .hero-title {
+    margin-left: -370px;
+}
+.hero.slide-6 .hero-subtitle,
+.hero.slide-6 .hero-title {
+    margin-left: -370px;
+}
 
 /* Pagination Dots */
 .pagination-dots {
