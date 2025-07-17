@@ -17,22 +17,22 @@ const HeroSection = () => {
       title: 'INDONESIA\'S BEST<br />CAKE & PASTRY'
     },
     {
+      image: '/images/desktop3.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    },
+     {
       image: '/images/desktop4.jpg',
       subtitle: 'Sweet. Perfect. Unforgettable.',
       title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
     },
      {
+      image: '/images/desktop5.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    },
+     {
       image: '/images/desktop6.jpg',
-      subtitle: 'Sweet. Perfect. Unforgettable.',
-      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
-    },
-     {
-      image: '/images/desktop7.jpg',
-      subtitle: 'Sweet. Perfect. Unforgettable.',
-      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
-    },
-     {
-      image: '/images/desktop8.jpg',
       subtitle: 'Sweet. Perfect. Unforgettable.',
       title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
     },

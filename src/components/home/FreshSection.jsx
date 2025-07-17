@@ -19,7 +19,7 @@ const FreshSection = () => {
         <div className="fresh-grid">
           <div className="fresh-item">
             <div className="fresh-image">
-              <img src="/images/menu4.png" alt={t('Traditional Indonesian')} />
+              <img src="/images/about1.png" alt={t('Traditional Indonesian')} />
             </div>
             <div className="fresh-content">
               <h3>{t('Traditional Indonesian')}</h3>
