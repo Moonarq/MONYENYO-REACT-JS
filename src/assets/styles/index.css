@@ -24,7 +24,7 @@ html {
 /* Desktop zoom 90% - Mobile tidak terpengaruh */
 @media (min-width: 769px) {
     html {
-        zoom: 90%;
+        zoom: 100%;
     }
 }
 
