@@ -12,12 +12,7 @@ const AboutSection = () => {
         <div className="about-hero-split">
           <div className="hero-image-side">
             <div className="hero-image-container">
-              <img
-                src="/images/about.png"
-                alt="Monyenyo About"
-                className="hero-image"
-                style={{ width: '60vw', height: 'auto', display: 'block', marginLeft: 0, maxWidth: '600px' }}
-              />
+              <img src="/images/about.png" alt="Monyenyo About" className="hero-image" />
             </div>
           </div>
           <div className="hero-content-side">
