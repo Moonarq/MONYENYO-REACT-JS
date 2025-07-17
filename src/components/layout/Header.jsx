@@ -120,7 +120,7 @@ const Header = () => {
         {/* Social Media Icons */}
         <div className="social-icons">
           <a 
-            href="https://www.instagram.com/kelvianov/" 
+            href="https://www.instagram.com/monyenyo.bdg?igsh=cXloM2VqczJ1YTY2" 
             className="social-link" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -129,7 +129,7 @@ const Header = () => {
             <i className="fab fa-instagram"></i>
           </a>
           <a 
-            href="https://www.tiktok.com/@apartmenttheringgo?is_from_webapp=1&sender_device=pc" 
+            href="https://www.tiktok.com/@browniespastry_store?_t=ZS-8y6Z5ke8R1N&_r=1" 
             className="social-link" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -138,11 +138,11 @@ const Header = () => {
             <i className="fab fa-tiktok"></i>
           </a>
           <a 
-            href="#" 
+            href="https://www.facebook.com/share/153Ak7u2jD/" 
             className="social-link"
-            aria-label="YouTube"
+            aria-label="Facebook"
           >
-            <i className="fab fa-youtube"></i>
+            <i className="fab fa-facebook"></i>
           </a>
         </div>
 
