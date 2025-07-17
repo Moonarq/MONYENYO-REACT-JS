@@ -20,7 +20,23 @@ const HeroSection = () => {
       image: '/images/desktop4.jpg',
       subtitle: 'Sweet. Perfect. Unforgettable.',
       title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
-    }
+    },
+     {
+      image: '/images/desktop6.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    },
+     {
+      image: '/images/desktop7.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    },
+     {
+      image: '/images/desktop8.jpg',
+      subtitle: 'Sweet. Perfect. Unforgettable.',
+      title: 'INDONESIA\'S BEST<br />DESSERT EXPERIENCE'
+    },
+    
   ]
 
   // Function to change slide with animation

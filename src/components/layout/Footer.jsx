@@ -25,17 +25,17 @@ const Footer = () => {
           <div className="footer-contact">
             <h4>{t('Contact Us')}</h4>
             <div className="contact-item">
-              <span>Jl. Indonesia Raya, Sudirman, Jakarta Selatan, DKI Jakarta, Indonesia, 10150</span>
+              <span>Jl. Terusan Gatot Subroto No.302, Kb. Kangkung, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40284</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
               <span>
-                {location.pathname === '/about' ? 'hello@monyenyo.com' : 'mail@example.com'}
+                {location.pathname === '/about' ? 'monyenyobdg@gmail.com' : 'monyenyobdg@gmail.com'}
               </span>
             </div>
             <div className="contact-item">
               <i className="fas fa-phone"></i>
-              <span>+62 822-9502-9308</span>
+              <span>+62 857-2496-0839</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
             <h4>{t('Social Media')}</h4>
             <div className="social-links">
               <a 
-                href="https://www.instagram.com/kelvianov/" 
+                href="https://www.tiktok.com/@browniespastry_store?_t=ZS-8y6Z5ke8R1N&_r=1" 
                 className="social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,14 +53,7 @@ const Footer = () => {
                 <i className="fab fa-instagram"></i>
               </a>
               <a 
-                href="#" 
-                className="social-link"
-                aria-label="YouTube"
-              >
-                <i className="fab fa-youtube"></i>
-              </a>
-              <a 
-                href="https://www.tiktok.com/@apartmenttheringgo?is_from_webapp=1&sender_device=pc" 
+                href="https://www.tiktok.com/@browniespastry_store?_t=ZS-8y6Z5ke8R1N&_r=1" 
                 className="social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +62,7 @@ const Footer = () => {
                 <i className="fab fa-tiktok"></i>
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/share/153Ak7u2jD/" 
                 className="social-link"
                 aria-label="Facebook"
               >
@@ -81,7 +74,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p>© 2024 {location.pathname === '/about' ? 'Monyenyo' : 'Kelvianov'}. {t('All Rights Reserved.')}</p>
+          <p>© 2024 {location.pathname === '/about' ? 'Monyenyo' : 'Monyenyo'}. {t('All Rights Reserved.')}</p>
         </div>
       </div>
     </footer>
