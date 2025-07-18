@@ -77,7 +77,7 @@ const Menu = () => {
       desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       category: t('Cake'),
       price: 55000,
-      image: '/images/desktop1.jpg',
+      image: '/images/menu7.jpg',
       rating: 5.0
     },
     {
@@ -86,16 +86,7 @@ const Menu = () => {
       desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       category: t('Cake'),
       price: 55000,
-      image: '/images/desktop1.jpg',
-      rating: 5.0
-    },
-    {
-      id: 9,
-      name: t('Premium Cake'),
-      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
-      category: t('Cake'),
-      price: 55000,
-      image: '/images/desktop1.jpg',
+      image: '/images/menu8.jpg',
       rating: 5.0
     },
   ]
