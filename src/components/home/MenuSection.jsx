@@ -9,7 +9,7 @@ const MenuSection = () => {
   const menuItems = [
     {
       id: 1,
-      image: '/images/menu1.png',
+      image: '/images/desktop1.jpg',
       name: t('Chocolate Brownies'),
       description: t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.'),
       price: 'Rp 45,000',
@@ -18,7 +18,7 @@ const MenuSection = () => {
     },
     {
       id: 2,
-      image: '/images/menu2.png',
+      image: '/images/desktop2.jpg',
       name: t('Traditional Pastry'),
       description: t('Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.'),
       price: 'Rp 35,000',
@@ -27,13 +27,40 @@ const MenuSection = () => {
     },
     {
       id: 3,
-      image: '/images/menu5.png',
+      image: '/images/desktop3.jpg',
       name: t('Premium Cake'),
       description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
-    }
+    },
+      {
+      id: 4,
+      image: '/images/desktop4.jpg',
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      price: 'Rp 55,000',
+      category: t('Cake'),
+      rating: '5.0'
+    },
+      {
+      id: 5,
+      image: '/images/desktop5.jpg',
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      price: 'Rp 55,000',
+      category: t('Cake'),
+      rating: '5.0'
+    },
+      {
+      id: 6,
+      image: '/images/desktop6.jpg',
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      price: 'Rp 55,000',
+      category: t('Cake'),
+      rating: '5.0'
+    },
   ]
 
   return (
