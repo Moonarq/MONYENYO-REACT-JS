@@ -5,6 +5,8 @@ import './Menu.css'
 
 const Menu = () => {
   const { t } = useLanguage()
+  const [showAllMobile, setShowAllMobile] = React.useState(false);
+  const isDesktop = window.innerWidth > 768;
 
   // Apply Menu page styles to header
   React.useEffect(() => {
@@ -13,6 +15,90 @@ const Menu = () => {
       document.body.classList.remove('menu-page')
     }
   }, [])
+
+  const menuItems = [
+    {
+      id: 1,
+      name: t('Chocolate Brownies'),
+      desc: t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.'),
+      category: t('Brownies'),
+      price: 45000,
+      image: '/images/desktop1.jpg',
+      rating: 4.9
+    },
+    {
+      id: 2,
+      name: t('Traditional Pastry'),
+      desc: t('Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.'),
+      category: t('Pastry'),
+      price: 35000,
+      image: '/images/desktop2.jpg',
+      rating: 4.8
+    },
+    {
+      id: 3,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop3.jpg',
+      rating: 5.0
+    },
+    {
+      id: 4,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop4.jpg',
+      rating: 5.0
+    },
+    {
+      id: 5,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop5.jpg',
+      rating: 5.0
+    },
+    {
+      id: 6,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop6.jpg',
+      rating: 5.0
+    },
+    {
+      id: 7,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop1.jpg',
+      rating: 5.0
+    },
+    {
+      id: 8,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop1.jpg',
+      rating: 5.0
+    },
+    {
+      id: 9,
+      name: t('Premium Cake'),
+      desc: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      category: t('Cake'),
+      price: 55000,
+      image: '/images/desktop1.jpg',
+      rating: 5.0
+    },
+  ]
 
   return (
     <>
@@ -43,256 +129,48 @@ const Menu = () => {
         <section className="menu-items">
           <div className="container">
             <div className="menu-grid">
-              {/* Menu Item 1 */}
-              <a
-                href="https://setoko.co/monyenyo-bakery/brownies-pastry-original-544152"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none', color: 'inherit' }}
-              >
-                <div className="menu-item">
+              {(isDesktop
+                ? menuItems
+                : showAllMobile
+                  ? menuItems.slice(0, 8)
+                  : menuItems.slice(0, 4)
+              ).map((item, idx) => (
+                <div className="menu-item" key={item.id}>
                   <div className="menu-image">
-                    <img src="/images/desktop1.jpg" alt="Chocolate Brownies" />
+                    <img src={item.image} alt={item.name} />
                     <div className="menu-overlay">
-                      <div className="menu-price">Rp 45,000</div>
+                      <div className="menu-price">Rp {item.price.toLocaleString()}</div>
                     </div>
                   </div>
                   <div className="menu-content">
-                    <h3 className="menu-name">{t('Chocolate Brownies')}</h3>
+                    <h3 className="menu-name">{item.name}</h3>
                     <p className="menu-desc">
-                      {t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.')}
+                      {item.desc}
                     </p>
                     <div className="menu-details">
-                      <span className="menu-category">{t('Brownies')}</span>
+                      <span className="menu-category">{item.category}</span>
                       <div className="menu-rating">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <span>4.9</span>
+                        {[...Array(5)].map((_, i) => (
+                          <i key={i} className={`fas fa-star${i < Math.floor(item.rating) ? '' : '-o'}`}></i>
+                        ))}
+                        <span>{item.rating}</span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </a>
-
-              {/* Menu Item 2 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop2.jpg" alt="Traditional Pastry" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 35,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Traditional Pastry')}</h3>
-                  <p className="menu-desc">
-                    {t('Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Pastry')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>4.8</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Menu Item 3 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop3.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 4 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop4.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 5 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop5.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 6 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop6.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 7 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop1.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 8 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop1.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Menu Item 9 */}
-              <div className="menu-item">
-                <div className="menu-image">
-                  <img src="/images/desktop1.jpg" alt="Premium Cake" />
-                  <div className="menu-overlay">
-                    <div className="menu-price">Rp 55,000</div>
-                  </div>
-                </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{t('Premium Cake')}</h3>
-                  <p className="menu-desc">
-                    {t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.')}
-                  </p>
-                  <div className="menu-details">
-                    <span className="menu-category">{t('Cake')}</span>
-                    <div className="menu-rating">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
+            {!isDesktop && !showAllMobile && menuItems.length > 4 && (
+              <div style={{ textAlign: 'center', marginTop: '32px' }}>
+                <button
+                  className="menu-show-more-btn"
+                  onClick={() => setShowAllMobile(true)}
+                  style={{ padding: '12px 32px', borderRadius: '25px', background: '#8B4513', color: 'white', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer' }}
+                >
+                  See More
+                </button>
+              </div>
+            )}
           </div>
         </section>
       </div>
