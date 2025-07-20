@@ -10,8 +10,8 @@ const MenuSection = () => {
     {
       id: 1,
       image: '/images/desktop1.jpg',
-      name: t('Chocolate Brownies'),
-      description: t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.'),
+      name: t('Bolu Abon Sapi'),
+      description: t("Bolu abon sapi bertekstur lembut dengan taburan abon premium dan cita rasa gurih-manis yang seimbang. Satu box isi 6 potong."),
       price: 'Rp 45,000',
       category: t('Brownies'),
       rating: '4.9'
@@ -67,10 +67,10 @@ const MenuSection = () => {
     <section className="menu-section" id="menu">
       <div className="container">
         <div className="menu-section-header">
-          <span className="menu-section-label">{t('OUR SPECIALTY')}</span>
-          <h2 className="menu-section-title">{t('DELICIOUS MENU')}</h2>
+          <span className="menu-section-label">{t('KOLEKSI LEZAT KAMI')}</span>
+          <h2 className="menu-section-title">{t('MENU CAMILAN')}</h2>
           <p className="menu-section-description">
-            {t('Discover our signature collection of traditional Indonesian brownies and pastries.')}
+            {t("Nikmati kreasi kuliner khas kami dengan bahan terbaik dan rasa istimewa untuk pengalaman camilan tak terlupakan.")}
           </p>
         </div>
         
