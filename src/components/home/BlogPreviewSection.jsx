@@ -37,7 +37,7 @@ const BlogPreviewSection = () => {
    
   },
   {
-    image: '/images/desktop1.jpg',
+    image: '/images/desktop4.jpg',
     category: t('Tips'),
     title: t('Cara Menyimpan Brownies Agar Tetap Fresh'),
     date: 'Februari 28, 2024',
