@@ -253,7 +253,7 @@ const Header = () => {
         <div className="mobile-menu">
           <div className="mobile-menu-header">
             <span className="mobile-logo">
-              <img src="/images/logo.png" alt="Monyenyo Logo" style={{ height: 32, width: 'auto' }} />
+              <img src="/images/logo.png" alt="Monyenyo Logo" style={{ height: 50, width: 'auto' }} />
             </span>
             <button 
               className="close-menu" 
