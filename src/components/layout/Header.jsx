@@ -5,6 +5,22 @@ import { useNavbarScroll } from '../../hooks/useNavbarScroll'
 import './Header.css'
 
 const Header = () => {
+  // Example: useNavbarScroll returns a state or you can use your own scroll logic
+  // For demonstration, let's assume you have a state called isNavbarSolid
+  // You may need to adjust this logic to fit your actual scroll detection
+  const [isNavbarSolid, setIsNavbarSolid] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsNavbarSolid(true);
+      } else {
+        setIsNavbarSolid(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
   const { language, setLanguage, t } = useLanguage()
@@ -103,7 +119,7 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
+    <header className={`header ${isNavbarSolid ? 'desktop-solid' : 'desktop-transparent'}`}> 
       <div className="container">
         {/* Hamburger Menu Button (Mobile Only) */}
         <button 
@@ -173,7 +189,9 @@ const Header = () => {
 
         {/* Logo */}
         <div className="nav-logo">
-          <Link to="/" className="logo-text" onClick={handleHomeClick}>MoNyeNyo</Link>
+          <Link to="/" className="logo-text" onClick={handleHomeClick}>
+            <img src="/images/logo.png" alt="Monyenyo Logo" className="desktop-navbar-logo" style={{ height: 42, width: 160 }} />
+          </Link>
         </div>
 
         {/* Right Navigation */}
@@ -234,7 +252,9 @@ const Header = () => {
       >
         <div className="mobile-menu">
           <div className="mobile-menu-header">
-            <span className="mobile-logo">Monyenyo</span>
+            <span className="mobile-logo">
+              <img src="/images/logo.png" alt="Monyenyo Logo" style={{ height: 32, width: 'auto' }} />
+            </span>
             <button 
               className="close-menu" 
               onClick={closeMobileMenu}

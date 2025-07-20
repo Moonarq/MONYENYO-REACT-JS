@@ -1,3 +1,9 @@
+.header.desktop-solid .desktop-navbar-logo {
+    margin-top: -5px;
+}
+.header.desktop-transparent .desktop-navbar-logo {
+    margin-top: 15px;
+}
 /* Header/Navbar & Mobile Menu Styles */
 .header {
     position: fixed;
