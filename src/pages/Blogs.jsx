@@ -16,16 +16,16 @@ const Blogs = () => {
   }, [])
 
   const blogArticles = [
-    {
-      id: 1,
-      category: 'recipes',
-      image: '/images/blogs3.png',
-      title: t('Secrets to Perfect Brownies'),
-      excerpt: t('Master the art of creating the perfect brownie texture with our time-tested techniques and premium ingredient secrets.'),
-      author: t('by Chef Budi'),
-      date: 'Dec 12, 2024',
-      readTime: '5 min read'
-    },
+      {
+    id: 1,
+    category: 'promo',
+    image: '/images/promo.jpg',
+    title: t('Diskon 20% Brownies Premium'),
+    excerpt: t('Nikmati potongan harga 20% untuk semua varian brownies premium Monyenyo selama promo minggu ini.'),
+    author: t('Tim Monyenyo'),
+    date: 'Jul 20, 2025',
+    readTime: '2 min read'
+  },
     {
       id: 2,
       category: 'heritage',
@@ -79,11 +79,12 @@ const Blogs = () => {
   ]
 
   const categories = [
-    { id: 'all', name: t('All Stories'), icon: 'fas fa-th-large', count: 24 },
-    { id: 'recipes', name: t('Recipes'), icon: 'fas fa-utensils', count: 8 },
-    { id: 'heritage', name: t('Heritage'), icon: 'fas fa-landmark', count: 6 },
-    { id: 'behind-scenes', name: t('Behind Scenes'), icon: 'fas fa-camera', count: 5 }
-  ]
+  { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 24 },
+  { id: 'promo', name: t('Promo'), icon: 'fas fa-tags', count: 8 },
+  { id: 'menu-baru', name: t('Menu Baru'), icon: 'fas fa-utensils', count: 6 },
+  { id: 'event', name: t('Event & Kabar'), icon: 'fas fa-calendar-alt', count: 3 }
+]
+
 
   const filteredArticles = activeCategory === 'all' 
     ? blogArticles 
@@ -107,10 +108,10 @@ const Blogs = () => {
           <div className="container">
             <div className="about-hero-content">
               <div className="hero-text-center">
-                <span className="company-label">{t('OUR STORIES')}</span>
-                <h1 className="hero-main-title">{t('STORIES & INSIGHTS')}</h1>
+                <span className="company-label">{t('KABAR MONYENYO')}</span>
+                <h1 className="hero-main-title">{t('PROMO & INFO TERBARU')}</h1>
                 <p className="hero-description">
-                  {t('Discover the passion, tradition, and innovation behind every Monyenyo creation through our collection of stories, recipes, and behind-the-scenes moments.')}
+                  {t('Dapatkan promo spesial, menu terbaru, tips penyajian lezat, dan update menarik langsung dari dapur Monyenyo.')}
                 </p>
               </div>
             </div>
@@ -118,43 +119,44 @@ const Blogs = () => {
         </section>
 
         {/* Featured Article Section */}
-        <section className="featured-article">
-          <div className="container">
-            <div className="featured-content">
-              <div className="featured-image">
-                <img src="/images/test1.png" alt="Featured Article" />
-                <div className="featured-badge">{t('FEATURED')}</div>
-              </div>
-              <div className="featured-text">
-                <div className="article-meta">
-                  <span className="article-category">{t('Heritage')}</span>
-                  <span className="article-date">December 15, 2024</span>
-                </div>
-                <h2 className="featured-title">{t('The Art of Traditional Indonesian Brownies')}</h2>
-                <p className="featured-excerpt">
-                  {t('Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.')}
-                </p>
-                <div className="featured-author">
-                  <div className="author-avatar">
-                    <i className="fas fa-user-circle"></i>
-                  </div>
-                  <div className="author-info">
-                    <span className="author-name">Chef Maria Sari</span>
-                    <span className="author-title">{t('Head Pastry Chef')}</span>
-                  </div>
-                </div>
-                <a href="#" className="featured-read-btn">{t('Read Full Story')}</a>
-              </div>
-            </div>
+     <section className="featured-article">
+  <div className="container">
+    <div className="featured-content">
+      <div className="featured-image">
+        <img src="/images/promo1.jpg" alt="Promo Spesial" />
+        <div className="featured-badge">{t('PROMO')}</div>
+      </div>
+      <div className="featured-text">
+        <div className="article-meta">
+          <span className="article-category">{t('Promo Spesial')}</span>
+          <span className="article-date">Juli 20, 2025</span>
+        </div>
+        <h2 className="featured-title">{t('Diskon 20% untuk Brownies Favoritmu')}</h2>
+        <p className="featured-excerpt">
+          {t('Nikmati kelezatan brownies premium Monyenyo dengan potongan harga spesial minggu ini. Jangan sampai terlewatkan!')}
+        </p>
+        <div className="featured-author">
+          <div className="author-avatar">
+            <i className="fas fa-user-circle"></i>
           </div>
-        </section>
+          <div className="author-info">
+            <span className="author-name">Tim Monyenyo</span>
+            <span className="author-title">{t('Promo Campaign')}</span>
+          </div>
+        </div>
+        <a href="#" className="featured-read-btn">{t('Lihat Detail Promo')}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Blog Categories Section */}
         <section className="blog-categories">
           <div className="container">
-            <div className="categories-header">
-              <h2 className="section-title">{t('EXPLORE BY CATEGORY')}</h2>
-              <p className="section-subtitle">{t('Find stories that interest you most')}</p>
+          <div className="categories-header">
+            <h2 className="section-title">{t('TEMUKAN PROMO MENARIK')}</h2>
+            <p className="section-subtitle">{t('Temukan promo dan info yang kamu cari')}</p>
             </div>
             <div className="categories-grid">
               {categories.map(category => (
@@ -236,7 +238,7 @@ const Blogs = () => {
         </section>
       </div>
     </>
-  )
+  );
 }
 
 export default Blogs

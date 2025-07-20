@@ -6,54 +6,57 @@ import './BlogPreviewSection.css'
 const BlogPreviewSection = () => {
   const { t } = useLanguage()
 
-  const featuredPost = {
-    image: '/images/test1.png',
-    category: t('Heritage'),
-    title: t('The Art of Traditional Indonesian Brownies'),
-    excerpt: t('Journey through generations of baking traditions as we unveil the secrets behind our signature brownies'),
-    author: 'Chef Maria Sari',
-    date: 'December 15, 2024'
-  }
+ const featuredPost = {
+  image: '/images/promo.jpg',
+  category: t('Promo'),
+  title: t('Promo Spesial Lebaran 2024'),
+  excerpt: t('Nikmati diskon hingga 25% untuk semua varian brownies premium Monyenyo selama bulan Ramadhan.'),
+  author: 'Tim Monyenyo',
+  date: 'Maret 10, 2024'
+}
 
-  const recentPosts = [
-    {
-      image: '/images/blogs3.png',
-      category: t('Recipes'),
-      title: t('Secrets to Perfect Brownies'),
-      date: 'Dec 12, 2024',
-      readTime: '5 min read'
-    },
-    {
-      image: '/images/menu2.png',
-      category: t('Behind Scenes'),
-      title: t('Morning at Monyenyo Kitchen'),
-      date: 'Dec 10, 2024',
-      readTime: '3 min read'
-    },
-    {
-      image: '/images/test2.png',
-      category: t('Heritage'),
-      title: t('Indonesia\'s Spice Heritage'),
-      date: 'Dec 8, 2024',
-      readTime: '4 min read'
-    },
-    {
-      image: '/images/menu4.png',
-      category: t('Heritage'),
-      title: t('Family Recipe Legacy'),
-      date: 'Dec 5, 2024',
-      readTime: '6 min read'
-    }
-  ]
+
+ const recentPosts = [
+  {
+    image: '/images/promo1.jpg',
+    category: t('Promo'),
+    title: t('Weekend Sale – Diskon 20%'),
+    date: 'Maret 8, 2024',
+    readTime: '2 min read'
+  },
+  {
+    image: '/images/desktop6.jpg',
+    category: t('Menu Baru'),
+    title: t('Banana Strudel Resmi Hadir!'),
+    date: 'Maret 5, 2024',
+    readTime: '3 min read'
+  },
+  {
+    image: '/images/event.jpg',
+    category: t('Event'),
+    title: t('Monyenyo di Festival Kuliner Jakarta'),
+    date: 'Maret 2, 2024',
+    readTime: '4 min read'
+  },
+  {
+    image: '/images/desktop1.jpg',
+    category: t('Tips'),
+    title: t('Cara Menyimpan Brownies Agar Tetap Fresh'),
+    date: 'Februari 28, 2024',
+    readTime: '4 min read'
+  }
+]
+
+  
 
   return (
     <section className="blog-preview-section" id="blogs">
       <div className="container">
         <div className="blog-preview-header">
-          <h2 className="blog-preview-title">{t('LATEST FROM BLOG')}</h2>
-          <p className="blog-preview-description">
-            {t('Discover the passion, tradition, and innovation behind every Monyenyo creation')}
-          </p>
+       <h2 className="blog-preview-title">{t('PROMO & BERITA TERBARU')}</h2>
+        <p className="blog-preview-description">
+          {t("Temukan promo menarik dan informasi terbaru dari Monyenyo untuk setiap momen spesial.")}
+        </p>
         </div>
         
         <div className="blog-preview-grid">
@@ -61,7 +64,7 @@ const BlogPreviewSection = () => {
           <div className="featured-blog-post">
             <div className="featured-blog-image">
               <img src={featuredPost.image} alt={featuredPost.title} />
-              <div className="featured-blog-badge">{t('FEATURED')}</div>
+              <div className="featured-blog-badge">{t('PROMO')}</div>
             </div>
             <div className="featured-blog-content">
               <div className="featured-blog-meta">
@@ -97,7 +100,7 @@ const BlogPreviewSection = () => {
         
         <div className="blog-preview-cta">
           <Link to="/blogs" className="blog-preview-btn">
-            {t('View All Stories')}
+            {t("Yuk Lihat Yang Baru")}
           </Link>
         </div>
       </div>

@@ -10,19 +10,31 @@ const Header = () => {
   // You may need to adjust this logic to fit your actual scroll detection
   const [isNavbarSolid, setIsNavbarSolid] = useState(false);
 
+  const location = useLocation()
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
+    const updateNavbarSolid = () => {
+      const isDesktop = window.innerWidth > 768;
+      const pathname = location.pathname;
+      const isSpecialPage = ['/about', '/menu', '/blogs', '/outlets', '/contact'].some(p => pathname.includes(p));
+      if (isDesktop && isSpecialPage) {
         setIsNavbarSolid(true);
       } else {
-        setIsNavbarSolid(false);
+        if (window.scrollY > 50) {
+          setIsNavbarSolid(true);
+        } else {
+          setIsNavbarSolid(false);
+        }
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    updateNavbarSolid();
+    window.addEventListener('scroll', updateNavbarSolid);
+    window.addEventListener('resize', updateNavbarSolid);
+    return () => {
+      window.removeEventListener('scroll', updateNavbarSolid);
+      window.removeEventListener('resize', updateNavbarSolid);
+    };
+  }, [location.pathname]);
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const location = useLocation()
   const { language, setLanguage, t } = useLanguage()
   const lastScrollPosition = useRef(0)
   
