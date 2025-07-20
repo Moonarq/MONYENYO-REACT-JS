@@ -24,7 +24,7 @@ const Blogs = () => {
   excerpt: t('Perkenalkan varian terbaru kami: Banana Strudle Mini dengan rasa pisang yang autentik dan tekstur lembut.'),
   author: t('Tim Monyenyo'),
   date: 'Jul 20, 2025',
-  readTime: 'New'
+  readTime: 'New Product'
 },
 
   {
@@ -40,48 +40,18 @@ const Blogs = () => {
 
     {
       id: 3,
-      category: 'behind-scenes',
-      image: '/images/about3.png',
+      category: 'Event & Kabar',
+      image: '/images/bestseller.jpg',
       title: t('A Day in Monyenyo Kitchen'),
       excerpt: t('Follow our bakers through their daily routine of creating fresh, delicious pastries from dawn to dusk.'),
       author: t('by Team Monyenyo'),
       date: 'Dec 8, 2024',
-      readTime: '4 min read'
+      readTime: 'Best Seller'
     },
-    {
-      id: 4,
-      category: 'tips',
-      image: '/images/menu4.png',
-      title: t('Home Baking Made Simple'),
-      excerpt: t('Professional tips and tricks to elevate your home baking game and achieve bakery-quality results.'),
-      author: t('by Chef Maria'),
-      date: 'Dec 5, 2024',
-      readTime: '6 min read'
-    },
-    {
-      id: 5,
-      category: 'recipes',
-      image: '/images/menu2.png',
-      title: t('Traditional Pastry Recipes'),
-      excerpt: t('Recreate classic Indonesian pastries at home with our authentic family recipes passed down through generations.'),
-      author: t('by Chef Andi'),
-      date: 'Dec 3, 2024',
-      readTime: '8 min read'
-    },
-    {
-      id: 6,
-      category: 'heritage',
-      image: '/images/test2.png',
-      title: t('Preserving Culinary Heritage'),
-      excerpt: t('Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.'),
-      author: t('by Founder'),
-      date: 'Nov 30, 2024',
-      readTime: '10 min read'
-    }
   ]
 
   const categories = [
-  { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 6 },
+  { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 3 },
   { id: 'promo', name: t('Promo'), icon: 'fas fa-tags', count: 1 },
   { id: 'menu-baru', name: t('Menu Baru'), icon: 'fas fa-utensils', count: 1 },
   { id: 'event', name: t('Event & Kabar'), icon: 'fas fa-calendar-alt', count: 3 }

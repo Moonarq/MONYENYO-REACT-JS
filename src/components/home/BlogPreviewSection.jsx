@@ -30,7 +30,7 @@ const BlogPreviewSection = () => {
    
   },
   {
-    image: '/images/event.jpg',
+    image: '/images/bestseller.jpg',
     category: t('Event'),
     title: t('Monyenyo di Festival Kuliner Jakarta'),
     date: 'Maret 2, 2024',
