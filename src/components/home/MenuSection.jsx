@@ -37,17 +37,17 @@ const MenuSection = () => {
       {
       id: 4,
       image: '/images/desktop4.jpg',
-      name: t('Premium Cake'),
-      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
-      price: 'Rp 55,000',
+      name: t('Brownies Pastry Tabur Keju'),
+      description: t('Brownies fudgy dengan keju serut berlimpah, dibalut pastry dengan rasa nyoklat, gurih, dan manis pas.'),
+      price: 'Rp 65,000',
       category: t('Cake'),
       rating: '5.0'
     },
       {
       id: 5,
       image: '/images/desktop5.jpg',
-      name: t('Premium Cake'),
-      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      name: t('Cheese Roll Cocol'),
+      description: t('Perpaduan keju batang pilihan dan pastry lembut dengan varian cocolan stroberi atau vanila. Satu box isi 10 potong.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
@@ -55,8 +55,8 @@ const MenuSection = () => {
       {
       id: 6,
       image: '/images/desktop6.jpg',
-      name: t('Premium Cake'),
-      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      name: t('Banana Strudel Mini'),
+      description: t('Perpaduan pisang, cokelat, dan keju dalam pastry panggang yang renyah, dengan rasa manis dan gurih seimbang. Satu box isi 6 potong.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
