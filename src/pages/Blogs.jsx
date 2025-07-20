@@ -18,25 +18,26 @@ const Blogs = () => {
   const blogArticles = [
  {
   id: 1,
-  category: 'new-product',
+  category: 'menu-baru',
   image: '/images/promo.jpg',
   title: t('Varian Baru: Banana Strudle Mini'),
   excerpt: t('Perkenalkan varian terbaru kami: Banana Strudle Mini dengan rasa pisang yang autentik dan tekstur lembut.'),
   author: t('Tim Monyenyo'),
   date: 'Jul 20, 2025',
-  readTime: '2 min read'
+  readTime: 'New'
 },
 
-    {
-      id: 2,
-      category: 'heritage',
-      image: '/images/about2.png',
-      title: t('Indonesian Spices in Modern Baking'),
-      excerpt: t('Explore how traditional Indonesian spices like pandan, cinnamon, and nutmeg transform modern pastry creations.'),
-      author: t('by Chef Sari'),
-      date: 'Dec 10, 2024',
-      readTime: '7 min read'
-    },
+  {
+  id: 2,
+  category: 'promo',
+  image: '/images/promo1.jpg',
+  title: t('Diskon Spesial Akhir Tahun'),
+  excerpt: t('Dapatkan potongan hingga 30% untuk semua dessert premium favorit Anda. Promo terbatas, jangan sampai terlewat!'),
+  author: t('Tim Monyenyo'),
+  date: '10 Des 2024',
+  readTime: 'Promo'
+},
+
     {
       id: 3,
       category: 'behind-scenes',
@@ -80,9 +81,9 @@ const Blogs = () => {
   ]
 
   const categories = [
-  { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 24 },
-  { id: 'promo', name: t('Promo'), icon: 'fas fa-tags', count: 8 },
-  { id: 'menu-baru', name: t('Menu Baru'), icon: 'fas fa-utensils', count: 6 },
+  { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 6 },
+  { id: 'promo', name: t('Promo'), icon: 'fas fa-tags', count: 1 },
+  { id: 'menu-baru', name: t('Menu Baru'), icon: 'fas fa-utensils', count: 1 },
   { id: 'event', name: t('Event & Kabar'), icon: 'fas fa-calendar-alt', count: 3 }
 ]
 
@@ -180,7 +181,11 @@ const Blogs = () => {
           <div className="container">
             <div className="articles-grid">
               {filteredArticles.map(article => (
-                <article key={article.id} className="blog-card">
+                <article
+                  key={article.id}
+                  className="blog-card"
+                  style={filteredArticles.length === 1 ? { maxWidth: '350px' } : {}}
+                >
                   <div className="blog-image">
                     <img src={article.image} alt={article.title} />
                     <div className="blog-overlay">
