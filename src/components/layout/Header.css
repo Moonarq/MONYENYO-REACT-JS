@@ -1,8 +1,18 @@
+@media (max-width: 768px) {
+  .header.desktop-transparent .desktop-navbar-logo {
+    margin-top: 15px;
+  }
+}
 .header.desktop-solid .desktop-navbar-logo {
     margin-top: -5px;
 }
-.header.desktop-transparent .desktop-navbar-logo {
-    margin-top: 15px;
+@media (min-width: 769px) {
+  .header.desktop-transparent .desktop-navbar-logo {
+    margin-top: 7px;
+  }
+  .header.desktop-solid .desktop-navbar-logo {
+    margin-top: 7px;
+  }
 }
 /* Header/Navbar & Mobile Menu Styles */
 .header {
