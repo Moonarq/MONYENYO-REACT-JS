@@ -10,8 +10,8 @@ const MenuSection = () => {
     {
       id: 1,
       image: '/images/desktop1.jpg',
-      name: t('Bolu Abon Sapi'),
-      description: t("Bolu abon sapi bertekstur lembut dengan taburan abon premium dan cita rasa gurih-manis yang seimbang. Satu box isi 6 potong."),
+      name: t('Chocolate Brownies'),
+      description: t('Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.'),
       price: 'Rp 45,000',
       category: t('Brownies'),
       rating: '4.9'
@@ -19,17 +19,17 @@ const MenuSection = () => {
     {
       id: 2,
       image: '/images/desktop2.jpg',
-      name: t('Brownies Pastry Original'),
-    description: t('Brownies fudgy dibalut dengan pastry olahan bertekstur kenyal menghadirkan rasa cokelat yang kaya dan manisnya pas di setiap gigitannya.'),
-      price: 'Rp 62,000',
+      name: t('Traditional Pastry'),
+      description: t('Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.'),
+      price: 'Rp 35,000',
       category: t('Pastry'),
       rating: '4.8'
     },
     {
       id: 3,
       image: '/images/desktop3.jpg',
-      name: t('Choco Roll Cocol'),
-     description: t('Cokelat batang pilihan dibalut pastry olahan, dengan cocolan pilihan varian stroberi dan vanila yang manis. Satu box isi 6 potong.'),
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
@@ -37,17 +37,17 @@ const MenuSection = () => {
       {
       id: 4,
       image: '/images/desktop4.jpg',
-      name: t('Brownies Pastry Tabur Keju'),
-      description: t('Brownies fudgy dengan keju serut berlimpah, dibalut pastry dengan rasa nyoklat, gurih, dan manis pas.'),
-      price: 'Rp 65,000',
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
     },
       {
       id: 5,
       image: '/images/desktop5.jpg',
-      name: t('Cheese Roll Cocol'),
-      description: t('Perpaduan keju batang pilihan dan pastry lembut dengan varian cocolan stroberi atau vanila. Satu box isi 10 potong.'),
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
@@ -55,8 +55,8 @@ const MenuSection = () => {
       {
       id: 6,
       image: '/images/desktop6.jpg',
-      name: t('Banana Strudel Mini'),
-      description: t('Perpaduan pisang, cokelat, dan keju dalam pastry panggang yang renyah, dengan rasa manis dan gurih seimbang. Satu box isi 6 potong.'),
+      name: t('Premium Cake'),
+      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
@@ -67,10 +67,10 @@ const MenuSection = () => {
     <section className="menu-section" id="menu">
       <div className="container">
         <div className="menu-section-header">
-          <span className="menu-section-label">{t('KOLEKSI LEZAT KAMI')}</span>
-          <h2 className="menu-section-title">{t('MENU CAMILAN')}</h2>
+          <span className="menu-section-label">{t('OUR SPECIALTY')}</span>
+          <h2 className="menu-section-title">{t('DELICIOUS MENU')}</h2>
           <p className="menu-section-description">
-            {t("Nikmati kreasi kuliner khas kami dengan bahan terbaik dan rasa istimewa untuk pengalaman camilan tak terlupakan.")}
+            {t('Discover our signature collection of traditional Indonesian brownies and pastries.')}
           </p>
         </div>
         
@@ -101,7 +101,7 @@ const MenuSection = () => {
         </div>
         
         <div className="menu-section-cta">
-          <Link to="/menu" className="menu-section-btn">{t('Lihat Semua Menu')}</Link>
+          <Link to="/menu" className="menu-section-btn">{t('View Full Menu')}</Link>
         </div>
       </div>
     </section>

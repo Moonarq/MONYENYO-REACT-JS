@@ -20,7 +20,7 @@ const AboutSection = () => {
               <span className="company-label">{t('MONYENYO')}</span>
               <h2 
                 className="hero-main-title"
-                dangerouslySetInnerHTML={{ __html: t('CEMILAN<br>RASA TERBARU DARI<br>MONYENYO') }}
+                dangerouslySetInnerHTML={{ __html: t('TRADITIONAL<br>INDONESIAN FOODS<br>AND HERITAGE') }}
               />
               
               <div className="hero-features">
@@ -31,8 +31,8 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="feature-text">
-                    <h3>{t('Banana Strudel Mini')}</h3>
-                    <p>{t("Dengan isian pisang, keju, dan cokelat pilihan, dibalut dengan kulit pastry olahan terbaik. Bentuknya yang mini menjadikan cemilan ini lebih praktis.")}</p>
+                    <h3>{t('The Heart of Every Kitchen')}</h3>
+                    <p>{t('Restaurants are much more than just places where food is sold—they are hubs of tradition, culture, and creativity.')}</p>
                   </div>
                 </div>
                 
@@ -43,14 +43,14 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="feature-text">
-                    <h3>{t('Tradisi Bertemu Inovasi')}</h3>
-                    <p>{t("Strudel berasal dari Eropa dan merupakan kue tradisional Austria serta Jerman dengan sejarah yang panjang. Di Indonesia, khususnya Banana Strudel, kue ini menjadi populer sebagai oleh-oleh khas dari Kota Malang.")}</p>
+                    <h3>{t('Innovation Meets Tradition')}</h3>
+                    <p>{t("Restaurants will continue to evolve, balancing the rich traditions of cooking with the modern consumer's needs.")}</p>
                   </div>
                 </div>
               </div>
               
               <div className="about-cta">
-                <Link to="/about" className="about-btn">{t("Produk Baru & Best Seller")}</Link>
+                <Link to="/about" className="about-btn">{t('Learn More About Us')}</Link>
               </div>
             </div>
           </div>

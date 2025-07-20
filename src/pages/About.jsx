@@ -33,10 +33,10 @@ const About = () => {
             </div>
             <div className="hero-content-side">
               <div className="hero-content">
-                <span className="company-label">{t('MONYENYO')}</span>
+                <span className="company-label">{t('OUR COMPANY')}</span>
                 <h1 
                   className="hero-main-title"
-                  dangerouslySetInnerHTML={{ __html: t('CEMILAN<br>RASA TERBARU DARI<br>MONYENYO') }}
+                  dangerouslySetInnerHTML={{ __html: t('TRADITIONAL<br>INDONESIAN FOODS<br>AND HERITAGE') }}
                 />
                 
                 <div className="hero-features">
@@ -46,11 +46,11 @@ const About = () => {
                         <path d="M16.25 6.25L8.125 14.375L3.75 10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                       <div className="feature-text">
-                    <h3>{t('Banana Strudel Mini')}</h3>
-                    <p>{t("Dengan isian pisang, keju, dan cokelat pilihan, dibalut dengan kulit pastry olahan terbaik. Bentuknya yang mini menjadikan cemilan ini lebih praktis.")}</p>
+                    <div className="feature-text">
+                      <h3>{t('The Heart of Every Kitchen')}</h3>
+                      <p>{t('Restaurants are much more than just places where food is sold—they are hubs of tradition, culture, and creativity.')}</p>
+                    </div>
                   </div>
-                </div>
                   
                   <div className="hero-feature">
                     <div className="feature-check">
@@ -58,12 +58,12 @@ const About = () => {
                         <path d="M16.25 6.25L8.125 14.375L3.75 10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                  <div className="feature-text">
-                    <h3>{t('Tradisi Bertemu Inovasi')}</h3>
-                    <p>{t("Strudel berasal dari Eropa dan merupakan kue tradisional Austria serta Jerman dengan sejarah yang panjang. Di Indonesia, khususnya Banana Strudel, kue ini menjadi populer sebagai oleh-oleh khas dari Kota Malang.")}</p>
+                    <div className="feature-text">
+                      <h3>{t('Innovation Meets Tradition')}</h3>
+                      <p>{t("Restaurants will continue to evolve, balancing the rich traditions of cooking with the modern consumer's needs.")}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -74,43 +74,42 @@ const About = () => {
       <section className="fresh-section">
         <div className="container">
           <div className="fresh-header">
-            <span className="fresh-label">{t('BEST SELLER')}</span>
+            <span className="fresh-label">{t('SPECIALTY DISHES')}</span>
             <h2 className="fresh-title">{t('FRESH FROM THE KITCHEN')}</h2>
             <p className="fresh-description">
-            {t("Nikmati perpaduan sempurna antara cita rasa tradisional Indonesia dan teknik kuliner modern, yang diolah setiap hari dari bahan-bahan terbaik.")}
-          </p>
+              {t('Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques, crafted daily with the finest ingredients.')}
+            </p>
           </div>
           
-            
-        <div className="fresh-grid">
-          <div className="fresh-item">
-            <div className="fresh-image">
-              <img src="/images/about1.png" alt={t('Cheese Roll Cocol')} />
+          <div className="fresh-grid">
+            <div className="fresh-item">
+              <div className="fresh-image">
+                <img src="/images/about1.png" alt={t('Traditional Indonesian')} />
+              </div>
+              <div className="fresh-content">
+                <h3>{t('Traditional Indonesian')}</h3>
+                <p>{t('Authentic recipes passed down through generations with original spices and cooking methods')}</p>
+              </div>
             </div>
-            <div className="fresh-content">
-              <h3>{t('Cheese Roll Cocol')}</h3>
-              <p>{t("Rasakan sensasi baru camilan kesukaanmu dengan cocolan stroberi dan vanila yang bikin nagih. Ngemil jadi makin seru.")}</p>
-            </div>
-          </div>
-            
-           <div className="fresh-item">
-            <div className="fresh-image">
-              <img src="/images/about2.png" alt={t('Brownies Pastry Tabur Keju')} />
-            </div>
-            <div className="fresh-content">
-              <h3>{t('Brownies Pastry Tabur Keju')}</h3>
-              <p>{t("Brownies fudgy dengan keju serut yang dibalut pastry, terasa kenyal, nyoklat, dan manisnya pas. Kejunya melimpah di dalam.")}</p>
-            </div>
-          </div>
             
             <div className="fresh-item">
-            <div className="fresh-image">
-              <img src="/images/about3.png" alt={t('Banana Strudel Mini')} />
+              <div className="fresh-image">
+                <img src="/images/about2.png" alt={t('Modern Presentation')} />
+              </div>
+              <div className="fresh-content">
+                <h3>{t('Modern Presentation')}</h3>
+                <p>{t('Contemporary plating and presentation techniques while preserving authentic flavors')}</p>
+              </div>
             </div>
-            <div className="fresh-content">
-              <h3>{t('Banana Strudel Mini')}</h3>
-              <p>{t("Berisi pisang, keju, dan cokelat pilihan, dibalut kulit pastry terbaik, camilan ini hadir dengan bentuk mini yang praktis.")}</p>
-            </div>
+            
+            <div className="fresh-item">
+              <div className="fresh-image">
+                <img src="/images/about3.png" alt={t('Premium Quality')} />
+              </div>
+              <div className="fresh-content">
+                <h3>{t('Premium Quality')}</h3>
+                <p>{t('Only the finest local ingredients sourced directly from trusted Indonesian suppliers')}</p>
+              </div>
             </div>
           </div>
         </div>
