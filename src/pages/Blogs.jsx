@@ -16,16 +16,17 @@ const Blogs = () => {
   }, [])
 
   const blogArticles = [
-      {
-    id: 1,
-    category: 'promo',
-    image: '/images/promo.jpg',
-    title: t('Diskon 20% Brownies Premium'),
-    excerpt: t('Nikmati potongan harga 20% untuk semua varian brownies premium Monyenyo selama promo minggu ini.'),
-    author: t('Tim Monyenyo'),
-    date: 'Jul 20, 2025',
-    readTime: '2 min read'
-  },
+ {
+  id: 1,
+  category: 'new-product',
+  image: '/images/promo.jpg',
+  title: t('Varian Baru: Banana Strudle Mini'),
+  excerpt: t('Perkenalkan varian terbaru kami: Banana Strudle Mini dengan rasa pisang yang autentik dan tekstur lembut.'),
+  author: t('Tim Monyenyo'),
+  date: 'Jul 20, 2025',
+  readTime: '2 min read'
+},
+
     {
       id: 2,
       category: 'heritage',

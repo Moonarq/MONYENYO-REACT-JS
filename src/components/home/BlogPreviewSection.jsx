@@ -8,14 +8,12 @@ const BlogPreviewSection = () => {
 
  const featuredPost = {
   image: '/images/promo.jpg',
-  category: t('Promo'),
-  title: t('Promo Spesial Lebaran 2024'),
-  excerpt: t('Nikmati diskon hingga 25% untuk semua varian brownies premium Monyenyo selama bulan Ramadhan.'),
+  category: t('Produk Baru'),
+   title: t('Varian Baru: Banana Strudle Mini'),
+  excerpt: t('Perkenalkan varian terbaru kami: Banana Strudle Mini dengan rasa pisang yang autentik dan tekstur lembut.'),
   author: 'Tim Monyenyo',
-  date: 'Maret 10, 2024'
+  date: 'Juli 20, 2025'
 }
-
-
  const recentPosts = [
   {
     image: '/images/promo1.jpg',
@@ -64,7 +62,6 @@ const BlogPreviewSection = () => {
           <div className="featured-blog-post">
             <div className="featured-blog-image">
               <img src={featuredPost.image} alt={featuredPost.title} />
-              <div className="featured-blog-badge">{t('PROMO')}</div>
             </div>
             <div className="featured-blog-content">
               <div className="featured-blog-meta">
