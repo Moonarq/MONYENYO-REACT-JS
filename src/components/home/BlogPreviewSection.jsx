@@ -82,7 +82,11 @@ const BlogPreviewSection = () => {
             {recentPosts.map((post, index) => (
               <div key={index} className="recent-blog-post">
                 <div className="recent-blog-image">
-                  <img src={post.image} alt={post.title} />
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    style={post.image === '/images/desktop4.jpg' ? { height: '100%', width: '100%', objectFit: 'cover', objectPosition: 'center' } : {}}
+                  />
                   <div className="recent-blog-time">{post.readTime}</div>
                 </div>
                 <div className="recent-blog-content">
