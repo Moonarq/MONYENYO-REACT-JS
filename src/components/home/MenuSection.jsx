@@ -19,17 +19,17 @@ const MenuSection = () => {
     {
       id: 2,
       image: '/images/desktop2.jpg',
-      name: t('Traditional Pastry'),
-      description: t('Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.'),
-      price: 'Rp 35,000',
+      name: t('Brownies Pastry Original'),
+    description: t('Brownies fudgy dibalut dengan pastry olahan bertekstur kenyal menghadirkan rasa cokelat yang kaya dan manisnya pas di setiap gigitannya.'),
+      price: 'Rp 62,000',
       category: t('Pastry'),
       rating: '4.8'
     },
     {
       id: 3,
       image: '/images/desktop3.jpg',
-      name: t('Premium Cake'),
-      description: t('Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.'),
+      name: t('Choco Roll Cocol'),
+     description: t('Cokelat batang pilihan dibalut pastry olahan, dengan cocolan pilihan varian stroberi dan vanila yang manis. Satu box isi 6 potong.'),
       price: 'Rp 55,000',
       category: t('Cake'),
       rating: '5.0'
