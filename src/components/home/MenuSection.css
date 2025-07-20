@@ -70,24 +70,17 @@
 .menu-section-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f8f9fa;
     transition: transform 0.3s ease;
+    transform: scale(1.08);
 }
 
 .menu-section-item:hover .menu-section-image img {
     transform: scale(1.1);
 }
 
-/* Fix untuk menu5.png yang terlalu zoom */
-.menu-section-item:nth-child(3) .menu-section-image img {
-    object-fit: contain;
-    object-position: center;
-    background: #f8f9fa;
-}
 
-.menu-section-item:nth-child(3):hover .menu-section-image img {
-    transform: scale(1.05);
-}
 
 .menu-section-overlay {
     position: absolute;
@@ -195,29 +188,17 @@
     .menu-section {
         padding: 60px 0;
     }
-    
-    .menu-section-title {
-        font-size: 2.5rem;
-    }
-    
-    .menu-section-description {
-        font-size: 1rem;
-    }
-    
     .menu-section-grid {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 0 20px;
     }
-    
     .menu-section-image {
         height: 200px;
     }
-    
     .menu-section-content {
         padding: 25px;
     }
-    
     .menu-section-details {
         flex-direction: column;
         gap: 15px;
@@ -229,11 +210,9 @@
     .menu-section-title {
         font-size: 2rem;
     }
-    
     .menu-section-grid {
         padding: 0 15px;
     }
-    
     .menu-section-content {
         padding: 20px;
     }

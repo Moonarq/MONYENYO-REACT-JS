@@ -101,7 +101,7 @@ const MenuSection = () => {
         </div>
         
         <div className="menu-section-cta">
-          <Link to="/menu" className="menu-section-btn">{t('View Full Menu')}</Link>
+          <Link to="/menu" className="menu-section-btn">{t('Lihat Semua Menu')}</Link>
         </div>
       </div>
     </section>
