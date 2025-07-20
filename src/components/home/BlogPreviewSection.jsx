@@ -20,28 +20,28 @@ const BlogPreviewSection = () => {
     category: t('Promo'),
     title: t('Weekend Sale – Diskon 20%'),
     date: 'Maret 8, 2024',
-    readTime: '2 min read'
+    
   },
   {
     image: '/images/desktop6.jpg',
     category: t('Menu Baru'),
     title: t('Banana Strudel Resmi Hadir!'),
     date: 'Maret 5, 2024',
-    readTime: '3 min read'
+   
   },
   {
     image: '/images/event.jpg',
     category: t('Event'),
     title: t('Monyenyo di Festival Kuliner Jakarta'),
     date: 'Maret 2, 2024',
-    readTime: '4 min read'
+   
   },
   {
     image: '/images/desktop1.jpg',
     category: t('Tips'),
     title: t('Cara Menyimpan Brownies Agar Tetap Fresh'),
     date: 'Februari 28, 2024',
-    readTime: '4 min read'
+  
   }
 ]
 
