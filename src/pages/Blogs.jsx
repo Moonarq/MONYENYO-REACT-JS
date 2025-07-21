@@ -40,7 +40,7 @@ const Blogs = () => {
 
     {
       id: 3,
-      category: 'Event & Kabar',
+      category: 'event',
       image: '/images/bestseller.jpg',
       title: t('A Day in Monyenyo Kitchen'),
       excerpt: t('Follow our bakers through their daily routine of creating fresh, delicious pastries from dawn to dusk.'),
@@ -54,7 +54,7 @@ const Blogs = () => {
   { id: 'all', name: t('Semua Update'), icon: 'fas fa-th-large', count: 3 },
   { id: 'promo', name: t('Promo'), icon: 'fas fa-tags', count: 1 },
   { id: 'menu-baru', name: t('Menu Baru'), icon: 'fas fa-utensils', count: 1 },
-  { id: 'event', name: t('Event & Kabar'), icon: 'fas fa-calendar-alt', count: 3 }
+  { id: 'event', name: t('Event & Kabar'), icon: 'fas fa-calendar-alt', count: 1 }
 ]
 
 
