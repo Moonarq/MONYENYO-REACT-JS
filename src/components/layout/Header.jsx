@@ -320,13 +320,28 @@ const Header = () => {
               CONTACT
             </Link>
           </nav>
-
-          <div className="mobile-contact">
-            <a href="tel:+6282295029308">
-              <i className="fas fa-phone"></i>
-              +62 822-9502-9308
-            </a>
+          {/* Mobile Language Toggle */}
+          <div className="mobile-language-toggle" style={{ textAlign: 'center', margin: '24px 0 12px 0' }}>
+            <span
+              className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+              data-lang="en"
+              onClick={() => handleLanguageChange('en')}
+              style={{ cursor: 'pointer', fontWeight: language === 'en' ? 'bold' : 'normal', fontSize: 18, marginRight: 8 }}
+            >
+              EN
+            </span>
+            <span className="lang-separator" style={{ margin: '0 6px', color: '#aaa' }}>|</span>
+            <span
+              className={`lang-btn ${language === 'id' ? 'active' : ''}`}
+              data-lang="id"
+              onClick={() => handleLanguageChange('id')}
+              style={{ cursor: 'pointer', fontWeight: language === 'id' ? 'bold' : 'normal', fontSize: 18, marginLeft: 8 }}
+            >
+              ID
+            </span>
           </div>
+
+      
 
           <div className="mobile-social">
             <span className="mobile-social-title">Follow Us</span>
