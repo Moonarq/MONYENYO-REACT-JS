@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import logoImg from '../../assets/images/logo.png';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useNavbarScroll } from '../../hooks/useNavbarScroll'
 import './Header.css'
@@ -11,6 +12,7 @@ const Header = () => {
   const [isNavbarSolid, setIsNavbarSolid] = useState(false);
 
   const location = useLocation()
+  const navigate = useNavigate()
   useEffect(() => {
     const updateNavbarSolid = () => {
       const isDesktop = window.innerWidth > 768;
@@ -42,43 +44,56 @@ const Header = () => {
   useNavbarScroll()
 
   // Enhanced mobile menu functionality
+  // Simpan posisi scroll secepat mungkin sebelum apapun berubah
+  const saveScrollPosition = () => {
+    lastScrollPosition.current = window.scrollY
+  }
   const handleHamburgerClick = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    
     if (isMenuOpen) {
       closeMobileMenu()
     } else {
-      lastScrollPosition.current = window.scrollY
       setIsMenuOpen(true)
-      
-      // Add class to body for CSS targeting
-      document.body.classList.add('mobile-menu-active')
-      
-      // Prevent body scroll
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${lastScrollPosition.current}px`
-      document.body.style.left = '0'
-      document.body.style.right = '0'
-      document.body.style.width = '100%'
-      document.body.style.overflow = 'hidden'
+      window.requestAnimationFrame(() => {
+        document.body.classList.add('mobile-menu-active')
+        document.body.style.position = 'fixed'
+        document.body.style.top = `-${lastScrollPosition.current}px`
+        document.body.style.left = '0'
+        document.body.style.right = '0'
+        document.body.style.width = '100%'
+        document.body.style.overflow = 'hidden'
+      })
     }
   }
 
   const closeMobileMenu = () => {
     setIsMenuOpen(false)
-    
-    // Remove class from body
     document.body.classList.remove('mobile-menu-active')
-    
-    // Restore body scroll
+    // Reset style body DULU
     document.body.style.position = ''
     document.body.style.top = ''
     document.body.style.left = ''
     document.body.style.right = ''
     document.body.style.width = ''
     document.body.style.overflow = ''
-    window.scrollTo(0, lastScrollPosition.current)
+    // Paksa scroll-behavior: auto di html sebelum scrollTo
+    document.documentElement.classList.add('no-smooth-scroll')
+    setTimeout(() => {
+      if (window.scrollY !== lastScrollPosition.current) {
+        window.scrollTo({ top: lastScrollPosition.current, left: 0, behavior: 'auto' })
+      }
+      // Hapus class setelah scrollTo (beri delay kecil agar pasti instant)
+      setTimeout(() => {
+        document.documentElement.classList.remove('no-smooth-scroll')
+        // --- FORCE header update after menu close (mobile) ---
+        // This will force the header to update its class (solid/coklat) instantly
+        if (typeof window !== 'undefined') {
+          const event = new window.Event('scroll');
+          window.dispatchEvent(event);
+        }
+      }, 32)
+    }, 0)
   }
 
   // Handle escape key and cleanup
@@ -99,11 +114,14 @@ const Header = () => {
   }, [isMenuOpen])
 
   const handleHomeClick = (e) => {
-    if (location.pathname === '/') {
-      e.preventDefault()
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
-    closeMobileMenu()
+    closeMobileMenu();
+    setTimeout(() => {
+      document.documentElement.classList.add('no-smooth-scroll');
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      setTimeout(() => {
+        document.documentElement.classList.remove('no-smooth-scroll');
+      }, 32);
+    }, 100);
   }
 
   // Handle navigation with scroll to top
@@ -136,13 +154,14 @@ const Header = () => {
         {/* Hamburger Menu Button (Mobile Only) */}
         <button 
           className={`hamburger-menu ${isMenuOpen ? 'active menu-open' : ''}`}
+          onMouseDown={saveScrollPosition}
+          onTouchStart={saveScrollPosition}
           onClick={handleHamburgerClick}
-          onTouchStart={handleHamburgerClick}
           aria-label="Toggle menu"
         >
-          <span onClick={handleHamburgerClick} onTouchStart={handleHamburgerClick}></span>
-          <span onClick={handleHamburgerClick} onTouchStart={handleHamburgerClick}></span>
-          <span onClick={handleHamburgerClick} onTouchStart={handleHamburgerClick}></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         {/* Social Media Icons */}
@@ -201,8 +220,24 @@ const Header = () => {
 
         {/* Logo */}
         <div className="nav-logo">
-          <Link to="/" className="logo-text" onClick={handleHomeClick}>
-            <img src="/images/logo.png" alt="Monyenyo Logo" className="desktop-navbar-logo" style={{ height: 42, width: 160 }} />
+          <Link to="/" className="logo-text" onClick={async (e) => {
+            e.preventDefault();
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            } else {
+              closeMobileMenu();
+              // Use navigate to go to home, then scroll to top after navigation
+              navigate('/');
+              setTimeout(() => {
+                document.documentElement.classList.add('no-smooth-scroll');
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+                setTimeout(() => {
+                  document.documentElement.classList.remove('no-smooth-scroll');
+                }, 32);
+              }, 100);
+            }
+          }}>
+            <img src={logoImg} alt="Monyenyo Logo" className="desktop-navbar-logo" style={{ height: 42, width: 160 }} />
           </Link>
         </div>
 
@@ -265,7 +300,7 @@ const Header = () => {
         <div className="mobile-menu">
           <div className="mobile-menu-header">
             <span className="mobile-logo">
-              <img src="/images/logo.png" alt="Monyenyo Logo" style={{ height: 50, width: 'auto' }} />
+              <img src={logoImg} alt="Monyenyo Logo" style={{ height: 50, width: 'auto' }} />
             </span>
             <button 
               className="close-menu" 
@@ -320,28 +355,13 @@ const Header = () => {
               CONTACT
             </Link>
           </nav>
-          {/* Mobile Language Toggle */}
-          <div className="mobile-language-toggle" style={{ textAlign: 'center', margin: '24px 0 12px 0' }}>
-            <span
-              className={`lang-btn ${language === 'en' ? 'active' : ''}`}
-              data-lang="en"
-              onClick={() => handleLanguageChange('en')}
-              style={{ cursor: 'pointer', fontWeight: language === 'en' ? 'bold' : 'normal', fontSize: 18, marginRight: 8 }}
-            >
-              EN
-            </span>
-            <span className="lang-separator" style={{ margin: '0 6px', color: '#aaa' }}>|</span>
-            <span
-              className={`lang-btn ${language === 'id' ? 'active' : ''}`}
-              data-lang="id"
-              onClick={() => handleLanguageChange('id')}
-              style={{ cursor: 'pointer', fontWeight: language === 'id' ? 'bold' : 'normal', fontSize: 18, marginLeft: 8 }}
-            >
-              ID
-            </span>
-          </div>
 
-      
+          <div className="mobile-contact">
+            <a href="tel:+6282295029308">
+              <i className="fas fa-phone"></i>
+              +62 822-9502-9308
+            </a>
+          </div>
 
           <div className="mobile-social">
             <span className="mobile-social-title">Follow Us</span>
